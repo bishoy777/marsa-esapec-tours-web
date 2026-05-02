@@ -3,15 +3,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  head: {
-    link: [
-      {
-        rel: "preload",
-        as: "image",
-        href: "/images/camels-walking-each-other-diani-beach-kenya 1.png",
-      },
-    ],
-  },
+
   css: [
     "@/assets/css/tailwind.css",
     "@/assets/css/main.css",
