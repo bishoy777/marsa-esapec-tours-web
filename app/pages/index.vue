@@ -24,21 +24,19 @@
                     <div class="opacity-0 animate-pop-in">
                         <button @click="router.push('/trips')"
                             class="group bg-white text-[#082852] font-semibold px-8 py-3 rounded-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300 text-base flex items-center gap-2 mx-auto">
-                            Explore Trippreload
+                            prelod img
                             <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span>
                         </button>
                     </div>
                 </div>
             </section>
         </div>
-
-    </div>
-    <about />
-    <trips />
-    <services />
-    <package />
-    <reviews />
-    <faqs />
+        <about />
+        <trips />
+        <services />
+        <package />
+        <reviews />
+        <faqs />
     </div>
 </template>
 
@@ -49,18 +47,6 @@ import hero from "@/assets/images/camels-walking-each-other-diani-beach-kenya 1.
 import { useRouter } from "vue-router";
 const router = useRouter();
 
-const preloadImage = (src) => {
-    const img = new Image()
-    img.src = src
-}
-
-// Preload immediately
-preloadImage(hero)
-
-// Or preload after component mounts
-onMounted(() => {
-    preloadImage(hero)
-})
 </script>
 <style scoped>
 @keyframes slideUp {
