@@ -198,7 +198,7 @@
                                                     @click="form.to = to; showTo = false"
                                                     class="flex items-center justify-between px-4 py-3 hover:bg-blue-50 cursor-pointer transition-colors group">
                                                     <span class="text-sm font-medium group-hover:text-blue-600">{{ to
-                                                        }}</span>
+                                                    }}</span>
                                                     <Check v-if="form.to === to" class="w-4 h-4 text-blue-500" />
                                                 </div>
                                             </div>
@@ -453,7 +453,9 @@
 <script setup lang="ts">
 import taxiTransfer from "@/assets/images/taa.png";
 import { getItems } from "~/services/trips";
-import { addItem } from "@/services/trips"
+import { addItem } from "@/services/trips";
+import { useRouter } from "vue-router";
+const router = useRouter();
 import {
     Users,
     Calendar as CalendarIcon,
@@ -632,7 +634,7 @@ const submitBooking = async () => {
         delete form.addSimCard
 
         const res = await addItem('taxibooking', form)
-        // router.push(`/trips/confirmations/${res.data?.id}`)
+        router.push(`/trips/taxitransfer/${res.data?.id}`)
     }
     catch (err) {
         addToast('An error occurred while submitting your booking. Please try again later.', 'error');

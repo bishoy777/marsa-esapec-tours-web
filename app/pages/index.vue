@@ -25,7 +25,7 @@
                     <div class="opacity-0 animate-pop-in">
                         <button @click="router.push('/trips')"
                             class="group bg-white text-[#082852] font-semibold px-8 py-3 rounded-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300 text-base flex items-center gap-2 mx-auto">
-                            Explore Trips try to preload
+                            Explore Trips 
                             <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span>
                         </button>
                     </div>

@@ -355,7 +355,7 @@
                                 <div class="flex justify-between mt-4 pt-2">
                                     <span class="font-bold text-primary-foreground">Total Price</span>
                                     <span class="font-bold text-primary-foreground">{{ total * form.peopleCount
-                                    }} $</span>
+                                        }} $</span>
                                 </div>
                             </div>
                         </div>
@@ -363,10 +363,10 @@
 
                     <!-- CTA -->
                     <div class="flex justify-center pb-12">
-                        <nuxt-link to="/buildpackage"
+                        <button @click="stepNumber = 1"
                             class="bg-primary-danger text-white  px-8 py-3 rounded-full font-medium hover:bg-primary-danger/90 transition-colors">
                             Build new package
-                        </nuxt-link>
+                        </button>
                     </div>
 
                 </div>
@@ -392,7 +392,7 @@ const selectedTripIds = ref([]);
 onMounted(async () => {
     const res = await getItems("trip");
     try {
-        data.value = res.data?.data.filter(item => item.tripType?.id === 1);
+        data.value = res.data?.data.filter(item => item.tripType?.id != 1);
     }
     catch (err) {
     }
@@ -522,7 +522,7 @@ const submitBooking = async () => {
         return
     }
     loading.value = true
-    form.price = total.value 
+    form.price = total.value
     try {
         const payload = {
             tripIds: selectedTripIds.value,

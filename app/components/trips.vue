@@ -19,7 +19,7 @@ const data = ref(null)
 const getTrips = async () => {
     try {
         const res = await getItems('trip')
-        const trips = res.data?.data
+        const trips = res.data?.data.filter(item => item.tripType?.id != 1);
 
         data.value = trips.slice(0, 3)
 
