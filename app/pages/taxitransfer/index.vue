@@ -634,7 +634,7 @@ const submitBooking = async () => {
         delete form.addSimCard
 
         const res = await addItem('taxibooking', form)
-        router.push(`/trips/taxitransfer/${res.data?.id}`)
+        router.push(`/taxitransfer/confirmations/${res.data?.id}`)
     }
     catch (err) {
         addToast('An error occurred while submitting your booking. Please try again later.', 'error');
