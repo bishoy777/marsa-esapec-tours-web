@@ -25,7 +25,7 @@
                     <div class="opacity-0 animate-pop-in">
                         <button @click="router.push('/trips')"
                             class="group bg-white text-[#082852] font-semibold px-8 py-3 rounded-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300 text-base flex items-center gap-2 mx-auto">
-                            Explore Trips
+                            Explore Trips try to preload
                             <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span>
                         </button>
                     </div>
@@ -45,7 +45,17 @@
 
 <script setup>
 import { Calendar, Users, Search, ChevronDown, Globe, CheckCircle } from "lucide-vue-next";
-import hero from "@/assets/images/camels-walking-each-other-diani-beach-kenya 1.png"
+const hero = new URL('@/assets/images/camel.png', import.meta.url).href
+
+useHead({
+    link: [
+        {
+            rel: 'preload',
+            as: 'image',
+            href: hero
+        }
+    ]
+})
 
 import { useRouter } from "vue-router";
 const router = useRouter();
