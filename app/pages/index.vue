@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div id="hero" class="w-full bg-cover bg-no-repeat bg-center overflow-hidden"
+        <div id="hero" class="w-full bg-hero bg-cover bg-no-repeat bg-center"
             :style="{ backgroundImage: `url(${hero})` }">
-  <img :src="hero" alt="">
+            <!-- <img :src="hero" alt=""> -->
             <section class="relative h-[70vh] min-h-[500px] text-white flex items-center justify-center">
 
                 <!-- Animated Overlay -->
