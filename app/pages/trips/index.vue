@@ -113,4 +113,6 @@ watch(search, (val) => {
 
 /* If the above doesn't work, use this instead */
 #hero {
-    background-image: var(--hero-bg) !important;</style>
+    background-image: var(--hero-bg) !important
+}
+</style>
