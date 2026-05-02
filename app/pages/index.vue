@@ -1,7 +1,5 @@
 <template>
     <div>
-
-
         <div id="hero" class="w-full bg-cover bg-no-repeat bg-center overflow-hidden"
             :style="{ backgroundImage: `url(${hero})` }">
 
