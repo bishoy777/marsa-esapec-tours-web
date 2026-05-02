@@ -36,7 +36,7 @@
                     </div>
                 </section>
             </div>
-           
+
         </div>
         <about />
         <trips />
@@ -49,7 +49,7 @@
 
 <script setup>
 import { Calendar, Users, Search, ChevronDown, Globe, CheckCircle } from "lucide-vue-next";
-import hero from "../../public/camels-walking-each-other-diani-beach-kenya 1.png"
+import hero from "@/assets/images/camels-walking-each-other-diani-beach-kenya 1.png"
 
 import { useRouter } from "vue-router";
 const router = useRouter();
