@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         {
           rel: "preload",
           as: "image",
-          href: "/camels-walking-each-other-diani-beach-kenya 1.png", // from /public folder
+          href: "/camels.png", // from /public folder
         },
       ],
     },
