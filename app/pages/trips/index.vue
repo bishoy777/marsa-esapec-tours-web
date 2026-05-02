@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div id="hero" class=" w-full bg-hero bg-cover bg-no-repeat bg-center "
-            :style="{ backgroundImage: `url(${trips})` }">
+        <div id="hero" class="w-full bg-hero bg-cover bg-no-repeat bg-center" :style="{ '--hero-bg': `url(${trips})` }">
+            >
 
             <section
                 class="relative h-[70vh] min-h-[500px] text-white flex items-center justify-center overflow-hidden">
@@ -14,16 +14,16 @@
             </section>
 
             <div class="absolute -mt-32 md:-mt-12 z-20 left-0 right-0 px-4">
- 
+
                 <div class="max-w-5xl mx-auto">
                     <div
                         class="bg-white rounded-2xl shadow-xl p-4 md:p-6 flex flex-col md:flex-row items-center md:items-stretch gap-4 border border-slate-50 transition-all duration-500 hover:shadow-2xl">
 
-            
+
                         <div class="relative flex-1 w-full">
-                      
-  
-      
+
+
+
                             <input v-model="search" type="text" placeholder="Search by trip name..."
                                 class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 md:py-3 focus:bg-white focus:border-primary-danger focus:ring-4 focus:ring-primary-danger/5 outline-none transition-all text-base text-[#082852] font-medium" />
                         </div>
@@ -106,3 +106,11 @@ watch(search, (val) => {
     }, 500)
 })
 </script>
+<style scoped>
+#hero {
+    background-image: var(--hero-bg);
+}
+
+/* If the above doesn't work, use this instead */
+#hero {
+    background-image: var(--hero-bg) !important;</style>
