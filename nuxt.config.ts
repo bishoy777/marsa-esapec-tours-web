@@ -5,7 +5,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-   
+      link: [
+        {
+          rel: "preload",
+          as: "image",
+          href: "/camels.png", // from /public folder
+        },
+      ],
     },
   },
   css: [

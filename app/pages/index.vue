@@ -45,7 +45,8 @@
 
 <script setup>
 import { Calendar, Users, Search, ChevronDown, Globe, CheckCircle } from "lucide-vue-next";
-const hero = new URL('@/assets/images/camel.png', import.meta.url).href
+// import hero from "@/assets/images/camels.png";
+import hero from "@/assets/images/see-fish.png";
 
 useHead({
     link: [
