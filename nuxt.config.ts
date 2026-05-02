@@ -3,17 +3,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  app: {
-    head: {
-      link: [
-        {
-          rel: "preload",
-          as: "image",
-          href: "/camels.png", // from /public folder
-        },
-      ],
-    },
-  },
+
   css: [
     "@/assets/css/tailwind.css",
     "@/assets/css/main.css",

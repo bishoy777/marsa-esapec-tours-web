@@ -48,16 +48,6 @@
 // import hero from "@/assets/images/camels.png";
 import hero from "@/assets/images/camels.png";
 
-useHead({
-    link: [
-        {
-            rel: 'preload',
-            as: 'image',
-            href: hero
-        }
-    ]
-})
-
 import { useRouter } from "vue-router";
 const router = useRouter();
 const features = [

@@ -62,7 +62,8 @@
     </div>
 </template>
 <script setup>
-import trips from "@/assets/images/camels.png"
+import trips from "@/assets/images/concorde-moreen-beach 1.png"
+import camels from "@/assets/images/camels.png"
 import { getItems } from "~/services/trips"
 import { ref, onMounted, watch } from "vue"
 import { Search } from "lucide-vue-next"
