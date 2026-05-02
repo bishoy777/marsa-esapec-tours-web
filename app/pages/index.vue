@@ -2,7 +2,7 @@
     <div>
         <div id="hero" class="w-full bg-cover bg-no-repeat bg-center overflow-hidden"
             :style="{ backgroundImage: `url(${hero})` }">
-
+  <img :src="hero" alt="">
             <section class="relative h-[70vh] min-h-[500px] text-white flex items-center justify-center">
 
                 <!-- Animated Overlay -->
