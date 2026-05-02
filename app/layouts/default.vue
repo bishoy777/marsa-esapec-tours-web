@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex items-center justify-between px-4 sm:px-8 lg:px-24 py-4">
+    <nav class="flex items-center justify-between px-4 sm:px-8 lg:px-24 py-4 z-50 ">
         <!-- Logo -->
         <NuxtLink to="/"
             class="w-32 h-10 bg-muted rounded flex items-center justify-center text-muted-foreground text-sm">
