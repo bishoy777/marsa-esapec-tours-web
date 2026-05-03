@@ -508,7 +508,7 @@ const simPackges = ref([
 const getTrips = async () => {
 
     try {
-        const res = await getItems(`taxi`)
+        const res = await getItems(`taxi?perPage=1000`)
 
         data.value = res.data?.data
         const res2 = await getItems(`simcards`)
