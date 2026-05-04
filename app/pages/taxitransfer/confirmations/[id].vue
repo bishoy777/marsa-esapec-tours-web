@@ -68,7 +68,7 @@
                         <!-- Total -->
                         <div class="flex justify-between mt-4 pt-2">
                             <span class="font-bold text-primary-foreground">Total Price</span>
-                            <span class="font-bold text-primary-foreground">{{ data.totalPrice }} $</span>
+                            <span class="font-bold text-primary-foreground">{{ data.totalPrice }} €</span>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ const bookingInfo = computed(() => {
         ["Room Number / Flight Number", data.value.flightroomNumber],
         ["Phone", data.value.phone],
         ["vehicle", data.value.carType],
-        ['Price', `${transferPrice.value} $`],
+        ['Price', `${transferPrice.value} €`],
 
 
     ]
@@ -135,7 +135,7 @@ const simInfo = computed(() => {
     return [
         ["data package", data.value.simCapacity],
         ["Number of SIM cards", data.value.simCards],
-        ["price", `${Number(data.value.totalPrice) - transferPrice.value} $`],
+        ["price", `${Number(data.value.totalPrice) - transferPrice.value} €`],
 
     ]
 })

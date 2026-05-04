@@ -118,7 +118,7 @@
                             </h3>
                             <p class="mb-5">
                                 <span class="text-primary-danger font-bold text-xl">
-                                    ${{ totalPrice
+                                    €{{ totalPrice
                                     }}
                                 </span>
                                 <span class="text-[#666666] text-sm"> </span>

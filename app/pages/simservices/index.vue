@@ -76,7 +76,7 @@
                             </h3>
                             <p class="mb-5">
                                 <span class="text-primary-danger font-bold text-xl">
-                                    {{ selectedSimPackagePrice * form.cardsCount }} $
+                                    {{ selectedSimPackagePrice * form.cardsCount }} €
                                 </span>
                                 <span class="text-[#666666] text-sm"> </span>
                             </p>

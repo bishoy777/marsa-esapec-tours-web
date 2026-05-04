@@ -124,7 +124,7 @@
                     <p class="mb-5">
                         <span class="text-[#666666]">From </span>
                         <span class="text-primary-danger font-bold text-xl">
-                            ${{ data?.price }}
+                            €{{ data?.price }}
                         </span>
                         <span class="text-[#666666] text-sm"> /person</span>
                     </p>

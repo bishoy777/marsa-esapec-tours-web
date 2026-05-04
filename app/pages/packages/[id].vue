@@ -145,7 +145,7 @@
 
                     <p class="mb-5">
                         <span class="text-[#666666]">From </span>
-                        <span class="text-primary-danger font-bold text-xl">$700</span>
+                        <span class="text-primary-danger font-bold text-xl">€700</span>
                         <span class="text-[#666666] text-sm"> /person</span>
                     </p>
 

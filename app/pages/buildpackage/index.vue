@@ -92,7 +92,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-2">
                                     <span class="text-primary-danger text-xl font-bold">
-                                        {{ pkg.price }} $
+                                        {{ pkg.price }} €
                                     </span>
                                     <span class="text-border text-sm">/Person</span>
                                 </div>
@@ -130,7 +130,7 @@
 
                             <div class="flex items-center gap-3">
                                 <span class="text-primary-foreground-foreground font-semibold text-sm">
-                                    {{ trip.price }} $
+                                    {{ trip.price }} €
                                 </span>
 
                                 <button @click.stop="removeTrip(trip.id)"
@@ -146,12 +146,12 @@
                     <div class="border-t border-[#E6E6E6] pt-4 space-y-2 mt-4">
                         <div class="flex justify-between text-sm">
                             <span>Sub Total</span>
-                            <span>{{ subTotal }} $</span>
+                            <span>{{ subTotal }} €</span>
                         </div>
 
                         <div class="flex justify-between pt-2 border-t">
                             <span class="font-bold">Total</span>
-                            <span class="font-bold">{{ total }} $</span>
+                            <span class="font-bold">{{ total }} €</span>
                         </div>
                     </div>
 
@@ -286,14 +286,14 @@
                                         <CheckCircle class="w-4 h-4 text-primary-foreground/60" />
                                         <span>{{ trip.name }} </span>
                                     </div>
-                                    <span>{{ trip.price }} $</span>
+                                    <span>{{ trip.price }} €</span>
                                 </div>
                             </div>
 
                             <div class="mt-4 space-y-2 text-primary-foreground">
                                 <div class="flex justify-between border-t pt-2">
                                     <span class="font-bold">Total</span>
-                                    <span class="font-bold"> {{ total }} $</span>
+                                    <span class="font-bold"> {{ total }} €</span>
                                 </div>
                             </div>
                         </div>
@@ -355,7 +355,7 @@
                                 <div class="flex justify-between mt-4 pt-2">
                                     <span class="font-bold text-primary-foreground">Total Price</span>
                                     <span class="font-bold text-primary-foreground">{{ total * form.peopleCount
-                                        }} $</span>
+                                        }} €</span>
                                 </div>
                             </div>
                         </div>

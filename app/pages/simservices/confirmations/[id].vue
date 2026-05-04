@@ -65,7 +65,7 @@
                         <div class="flex justify-between mt-4 pt-2">
                             <span class="font-bold text-primary-foreground">Total Price</span>
                             <span class="font-bold text-primary-foreground">{{ data.price
-                                }} $</span>
+                                }} €</span>
                         </div>
                     </div>
                 </div>

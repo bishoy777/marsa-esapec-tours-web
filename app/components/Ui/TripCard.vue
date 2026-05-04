@@ -36,7 +36,7 @@
                     <div class="flex items-center gap-2">
 
                         <span class="text-primary-danger text-xl font-bold">
-                            {{ trip?.price + '$' }}
+                            {{ trip?.price + '€' }}
                         </span>
                         <span class="text-[#999999] text-sm">/Person</span>
                     </div>

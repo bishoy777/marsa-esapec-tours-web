@@ -85,7 +85,7 @@
                 <!-- Total -->
                 <div class="flex justify-between mt-4 pt-2">
                     <span class="font-bold text-foreground">Total Price</span>
-                    <span class="font-bold text-foreground">500 $</span>
+                    <span class="font-bold text-foreground">500 €</span>
                 </div>
             </div>
        <div class="flex flex-col lg:flex-row gap-8">
@@ -180,24 +180,24 @@
                                         <CheckCircle class="w-4 h-4 text-primary/60" />
                                         <span>trip . name </span>
                                     </div>
-                                    <span> trip.price $</span>
+                                    <span> trip.price €</span>
                                 </div>
                             </div>
 
                             <div class="mt-4 space-y-2">
                                 <div class="flex justify-between text-sm">
                                     <span>Sub Total</span>
-                                    <span> subTotal $</span>
+                                    <span> subTotal €</span>
                                 </div>
 
                                 <div class="flex justify-between text-sm text-primary">
                                     <span>Discount</span>
-                                    <span>- discount $</span>
+                                    <span>- discount €</span>
                                 </div>
 
                                 <div class="flex justify-between border-t pt-2">
                                     <span class="font-bold">Total</span>
-                                    <span class="font-bold"> total $</span>
+                                    <span class="font-bold"> total €</span>
                                 </div>
                             </div>
                         </div>
