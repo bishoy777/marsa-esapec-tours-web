@@ -449,11 +449,15 @@
         <div class="bg-background">
             <section class="max-w-7xl mx-auto px-4 md:px-6">
                 <div class="max-w-7xl mx-auto">
-
-                    <h2 class="text-xl md:text-3xl font-bold text-primary-foreground mb-8 md:mb-10">
-                        Reviews
-                    </h2>
-
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 md:mb-10">
+                        <h2 class="text-xl md:text-3xl font-bold text-primary-foreground">
+                            Reviews
+                        </h2>
+                        <button @click="router.push('/reviews/1')"
+                            class="bg-primary-danger text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all shadow-sm border border-white/10">
+                            Write a review
+                        </button>
+                    </div>
                     <div class="divide-y divide-border">
 
                         <div v-for="r in reviews" :key="r.id" class="py-6 flex flex-col md:flex-row gap-4 md:gap-6">

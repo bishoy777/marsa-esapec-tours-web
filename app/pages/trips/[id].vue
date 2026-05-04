@@ -1,7 +1,7 @@
 <template>
 
     <div class="min-h-screen w-full bg-muted">
-   <div class="px-4 sm:px-8 lg:px-24 pt-8">
+        <div class="px-4 sm:px-8 lg:px-24 pt-8">
             <nav class="flex items-center gap-2 text-sm text-primary-foreground mb-8">
                 <nuxt-link to="/" class="hover:text-foreground">
                     Home
@@ -237,9 +237,15 @@
             <section class="py-12 md:py-20 px-4">
                 <div class="max-w-7xl mx-auto">
 
-                    <h2 class="text-xl md:text-3xl font-bold text-primary-foreground mb-8 md:mb-10">
-                        Reviews
-                    </h2>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 md:mb-10">
+                        <h2 class="text-xl md:text-3xl font-bold text-primary-foreground">
+                            Reviews
+                        </h2>
+                        <button @click="router.push(`/tripreview/${route.params.id}`)"
+                            class="bg-primary-danger text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all shadow-sm border border-white/10">
+                            Write a review
+                        </button>
+                    </div>
 
                     <div class="divide-y divide-border">
 
