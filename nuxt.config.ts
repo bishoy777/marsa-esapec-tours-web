@@ -3,7 +3,6 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-
   css: [
     "@/assets/css/tailwind.css",
     "@/assets/css/main.css",
@@ -22,6 +21,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Marsa Escape Tours",
+
       meta: [
         {
           name: "description",
@@ -69,6 +69,13 @@ export default defineNuxtConfig({
         {
           name: "twitter:image",
           content: "https://www.marsascapetours.tours/logo.png",
+        },
+      ],
+      link: [
+        {
+          rel: "icon",
+          type: "image/png",
+          href: "/logo.png",
         },
       ],
     },
