@@ -117,12 +117,23 @@
                     </NuxtLink>
 
                     <!-- Bottom Actions -->
-                    <div class="flex items-center gap-3 pt-4 mt-2 border-t border-slate-100">
-                        <button class="flex items-center gap-1 text-foreground font-medium">
-                            <Globe class="w-4 h-4" />
-                            {{ locale.toUpperCase() }}
-                            <ChevronDown class="w-3 h-3 text-slate-400" />
+                    <div class="relative">
+                        <button @click="showLocale = !showLocale" type="button"
+                            class="flex items-center gap-2 border border-foreground rounded-full pl-3 pr-8 py-2 text-sm bg-transparent text-foreground cursor-pointer">
+                            <component :is="currentLocale.flag" class="h-5 w-5" />
+                            <span>{{ currentLocale.code.toUpperCase() }}</span>
+                            <ChevronDown class="w-3 h-3 absolute right-3 pointer-events-none" />
                         </button>
+
+                        <div v-if="showLocale"
+                            class="absolute left-0 mt-2 min-w-[150px] rounded-xl border border-border bg-white shadow-lg overflow-hidden z-50">
+                            <button v-for="item in locales" :key="item.code"
+                                @click="changeLocale(item.code); showLocale = false"
+                                class="w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-muted">
+                                <component :is="item.flag" class="h-5 w-5" />
+                                <span>{{ item.code.toUpperCase() }}</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
