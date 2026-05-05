@@ -93,7 +93,12 @@
   },
   "reviews": {
     "subtitle": "What Our Clients Are Saying About Us?",
-    "title": "Testimonials"
+
+    "title": "Reviews",
+    "write_review": "Write a review",
+    "recently": "Recently",
+    "anonymous": "User",
+    "related_title": "Related tours"
   },
   "hero": {
     "title_part1": "Discover",
@@ -101,5 +106,94 @@
     "title_part2": "Adventures In Marsa Alam & Beyond",
     "subtitle": "Pack your bags and let us redefine your travel experience. Where every journey is a story waiting to be told.",
     "button": "Explore Trips"
+  },
+  "all_trips": {
+    "hero_title": "All Trips",
+    "search_placeholder": "Search by trip name...",
+    "search_button": "Search",
+    "no_results": "No trips found",
+    "no_results_sub": "Try adjusting your search or filters",
+    "load_more": "Load more"
+  },
+  "trip_details": {
+    "nav_home": "Home",
+    "nav_all_trips": "All Trips",
+    "overview": "Overview",
+    "highlights": "Tour Highlights",
+    "itinerary": "Itinerary",
+    "morning": "Morning",
+    "afternoon": "Afternoon Tour",
+    "evening": "Evening",
+    "included": "Included",
+    "not_included": "Not Included",
+    "book_title": "Book This Tour",
+    "from": "From",
+    "per_person": "/person",
+    "details_heading": "Trip Details",
+    "total_price": "Total Price",
+    "booking_disclaimer": "This is a booking request. Our team will contact you to confirm availability.",
+    "reviews_title": "Reviews",
+    "write_review": "Write a review",
+    "related_tours": "Related tours",
+    "faq_title": "Frequently Asked Question",
+    "form": {
+      "date": "Date",
+      "guests": "Guests",
+      "hotel": "Hotel",
+      "hotel_placeholder": "Enter Your Hotel Name",
+      "room": "Room Number",
+      "room_placeholder": "Enter Your Room Number",
+      "name": "Full Name",
+      "name_placeholder": "Enter your full name",
+      "whatsapp": "WhatsApp Number",
+      "whatsapp_placeholder": "Enter Your WhatsApp Number",
+      "request": "Special Request",
+      "submit": "Request Booking",
+      "processing": "Processing..."
+    }
+  },
+  "booking": {
+    "title": "Book This Tour",
+    "from": "From",
+    "per_person": "/person",
+    "details_title": "Trip Details",
+    "date": "Date",
+    "guests": "Guest",
+    "hotel": "Hotel",
+    "hotel_placeholder": "Enter Your Hotel Name",
+    "room": "Room Number",
+    "room_placeholder": "Enter Your Room Number",
+    "name": "Full Name",
+    "name_placeholder": "Enter your full name",
+    "whatsapp": "WhatsApp Number",
+    "whatsapp_placeholder": "Enter Your WhatsApp Number",
+    "special_request": "Special Request",
+    "total_price": "Total Price",
+    "submit": "Request Booking",
+    "processing": "Processing...",
+    "disclaimer": "This is a booking request. Our team will contact you to confirm availability.",
+    "Overview": "Overview",
+    "TourHighlights": "Tour Highlights",
+    "Itinerary": "Itinerary",
+    "Morning": "Morning",
+    "Afternoon": "Afternoon Tour",
+    "Evening": "Evening",
+    "Included": "Included",
+    "NotIncluded": "Not Included",
+    "Reviews": "Reviews",
+    "WriteReview": "Write a review",
+    "RelatedTours": "Related tours"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "all_trips": "All Trips"
+  },"validation": {
+    "date_required": "Date is required",
+    "guests_required": "At least 1 guest is required",
+    "hotel_required": "Hotel name is required",
+    "room_required": "Room number is required",
+    "name_required": "Full name is required",
+    "phone_required": "WhatsApp number is required",
+    "toast":"Please fill required faild correctly"
   }
 }

@@ -4,13 +4,16 @@
         <div class="px-4 sm:px-8 lg:px-24 pt-8">
             <nav class="flex items-center gap-2 text-sm text-primary-foreground mb-8">
                 <nuxt-link to="/" class="hover:text-foreground">
-                    Home
+                    {{ $t('breadcrumbs.home') }}
                 </nuxt-link>
-
                 <ChevronRight class="w-4 h-4" />
-                <span class="text-foreground font-medium">All Trips</span>
+                <nuxt-link to="/trips" class="hover:text-foreground">
+                    <span class="font-medium">{{ $t('breadcrumbs.all_trips') }}</span>
+                </nuxt-link>
                 <ChevronRight class="w-4 h-4" />
-                <span class="text-foreground font-medium">Luxor Historical Tour</span>
+                <span class="text-foreground font-medium">
+                    {{ data?.name }}
+                </span>
             </nav>
         </div>
         <!-- Hero Image -->
@@ -25,7 +28,7 @@
 
                 <!-- Overview -->
                 <div>
-                    <h2 class="text-2xl font-bold text-primary-foreground mb-3">Overview</h2>
+                    <h2 class="text-2xl font-bold text-primary-foreground mb-3">{{ $t('booking.Overview') }}</h2>
                     <p class="text-[#666666] leading-relaxed">
                         {{ data?.overview }}
                     </p>
@@ -33,7 +36,7 @@
 
                 <!-- Highlights -->
                 <div>
-                    <h2 class="text-2xl font-bold text-primary-foreground mb-4">Tour Highlights</h2>
+                    <h2 class="text-2xl font-bold text-primary-foreground mb-4">{{ $t('booking.TourHighlights') }}</h2>
 
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3 text-primary-foreground" v-for="p in data?.places">
@@ -45,7 +48,7 @@
 
                 <!-- Itinerary -->
                 <div>
-                    <h2 class="text-2xl font-bold text-primary-foreground mb-6">Itinerary</h2>
+                    <h2 class="text-2xl font-bold text-primary-foreground mb-6">{{ $t('booking.Itinerary') }}</h2>
 
                     <!-- Day 1 -->
                     <div class="flex gap-4 mb-8" v-for="(d, index) in data?.days">
@@ -60,19 +63,19 @@
                         <div>
 
 
-                            <p class="font-semibold text-primary-foreground mb-1">Morning:</p>
+                            <p class="font-semibold text-primary-foreground mb-1">{{ $t('booking.Morning') }}:</p>
                             <ul class="text-[#666666] mb-3 space-y-1 text-sm">
                                 <li v-for="m in d?.morning">• {{ m }}</li>
 
                             </ul>
 
-                            <p class="font-semibold text-primary-foreground italic mb-1">Afternoon Tour:</p>
+                            <p class="font-semibold text-primary-foreground italic mb-1">{{ $t('booking.Afternoon') }}:</p>
                             <ul class="text-[#666666] mb-3 space-y-1 text-sm">
                                 <li v-for="f in d?.afternoon">• {{ f }}</li>
 
                             </ul>
 
-                            <p class="font-semibold text-primary-foreground mb-1">Evening:</p>
+                            <p class="font-semibold text-primary-foreground mb-1">{{ $t('booking.Evening') }}:</p>
                             <ul class="text-[#666666] mb-3 space-y-1 text-sm">
                                 <li v-for="e in d?.evining">• {{ e }}</li>
 
@@ -82,10 +85,10 @@
                     <div>
                         <!-- Included -->
                         <div>
-                            <h2 class="text-2xl font-bold text-foreground mb-4">Included</h2>
+                            <h2 class="text-2xl font-bold text-primary-foreground mb-4">{{ $t('booking.Included') }}</h2>
                             <ul class="space-y-3">
                                 <li v-for="item in data?.included" :key="item"
-                                    class="flex items-center gap-3 text-foreground text-sm">
+                                    class="flex items-center gap-3 text-primary-foreground text-sm">
                                     <span
                                         class="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs">
                                         <includeduicon />
@@ -97,10 +100,10 @@
 
                         <!-- Not Included -->
                         <div class="mt-8">
-                            <h2 class="text-2xl font-bold text-foreground mb-4">Not Included</h2>
+                            <h2 class="text-2xl font-bold text-primary-foreground mb-4">{{ $t('booking.NotIncluded') }}</h2>
                             <ul class="space-y-3">
                                 <li v-for="item in data?.excluded" :key="item"
-                                    class="flex items-center gap-3 text-foreground text-sm">
+                                    class="flex items-center gap-3 text-primary-foreground text-sm">
                                     <span
                                         class="w-5 h-5 rounded-full bg-destructive/10 text-destructive flex items-center justify-center text-xs">
                                         <notincludeduicon />
@@ -118,97 +121,83 @@
                 <div class="bg-background text-primary-foreground rounded-2xl shadow-lg p-6 sticky top-8">
 
                     <h3 class="text-xl font-bold text-primary-foreground mb-1">
-                        Book This Tour
+                        {{ $t('booking.title') }}
                     </h3>
 
                     <p class="mb-5">
-                        <span class="text-[#666666]">From </span>
+                        <span class="text-[#666666]">{{ $t('booking.from') }} </span>
                         <span class="text-primary-danger font-bold text-xl">
                             €{{ data?.price }}
                         </span>
-                        <span class="text-[#666666] text-sm"> /person</span>
+                        <span class="text-[#666666] text-sm"> {{ $t('booking.per_person') }}</span>
                     </p>
 
-                    <h4 class="text-primary-foreground font-bold mb-3">Trip Details</h4>
+                    <h4 class="text-primary-foreground font-bold mb-3">{{ $t('booking.details_title') }}</h4>
 
                     <!-- Date -->
-                    <label class="text-sm font-semibold mb-1 block">Date</label>
+                    <label class="text-sm font-semibold mb-1 block">{{ $t('booking.date') }}</label>
                     <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                         <Calendar class="w-5 h-5" />
                         <input type="date" v-model="form.date" class="bg-transparent outline-none text-sm flex-1" />
-
-
                     </div>
-                    <p v-if="errors.date" class="text-red-500 text-xs mt-1">
-                        {{ errors.date }}
-                    </p>
+                    <p v-if="errors.date" class="text-red-500 text-xs mt-1">{{ errors.date }}</p>
 
                     <!-- Guests -->
-                    <label class="text-sm font-semibold mb-1 block">Guest</label>
+                    <label class="text-sm font-semibold mb-1 block">{{ $t('booking.guests') }}</label>
                     <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                         <Users class="w-5 h-5" />
                         <input type="number" min="1" v-model="form.peopleCount"
                             class="bg-transparent outline-none text-sm flex-1" />
                     </div>
-                    <p v-if="errors.peopleCount" class="text-red-500 text-xs mt-1">
-                        {{ errors.peopleCount }}
-                    </p>
+                    <p v-if="errors.peopleCount" class="text-red-500 text-xs mt-1">{{ errors.peopleCount }}</p>
 
                     <!-- Hotel -->
-                    <label class="text-sm font-semibold text-primary-foreground mb-1 block">Hotel</label>
+                    <label class="text-sm font-semibold text-primary-foreground mb-1 block">{{ $t('booking.hotel')
+                    }}</label>
                     <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                         <Hotel class="w-5 h-5" />
-                        <input v-model="form.hotel" type="text" placeholder="Enter Your Hotel Name"
+                        <input v-model="form.hotel" type="text" :placeholder="$t('booking.hotel_placeholder')"
                             class="bg-transparent outline-none text-sm flex-1" />
                     </div>
-                    <p v-if="errors.hotel" class="text-red-500 text-xs mt-1">
-                        {{ errors.hotel }}
-                    </p>
+                    <p v-if="errors.hotel" class="text-red-500 text-xs mt-1">{{ errors.hotel }}</p>
 
                     <!-- Room -->
-                    <label class="text-sm font-semibold mb-1 block">Room Number</label>
+                    <label class="text-sm font-semibold mb-1 block">{{ $t('booking.room') }}</label>
                     <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                         <Phone class="w-5 h-5" />
-                        <input v-model="form.roomNumber" type="number" placeholder="Enter Your Room Number"
+                        <input v-model="form.roomNumber" type="number" :placeholder="$t('booking.room_placeholder')"
                             class="bg-transparent outline-none text-sm flex-1" />
                     </div>
-                    <p v-if="errors.roomNumber" class="text-red-500 text-xs mt-1">
-                        {{ errors.roomNumber }}
-                    </p>
+                    <p v-if="errors.roomNumber" class="text-red-500 text-xs mt-1">{{ errors.roomNumber }}</p>
 
                     <!-- Name -->
-                    <label class="text-sm font-semibold mb-1 block">Full Name</label>
+                    <label class="text-sm font-semibold mb-1 block">{{ $t('booking.name') }}</label>
                     <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                         <User class="w-5 h-5" />
-                        <input v-model="form.name" type="text" placeholder="Enter your full name"
+                        <input v-model="form.name" type="text" :placeholder="$t('booking.name_placeholder')"
                             class="bg-transparent outline-none text-sm flex-1" />
                     </div>
-                    <p v-if="errors.name" class="text-red-500 text-xs mt-1">
-                        {{ errors.name }}
-                    </p>
+                    <p v-if="errors.name" class="text-red-500 text-xs mt-1">{{ errors.name }}</p>
 
                     <!-- WhatsApp -->
-                    <label class="text-sm font-semibold mb-1 block">WhatsApp Number</label>
+                    <label class="text-sm font-semibold mb-1 block">{{ $t('booking.whatsapp') }}</label>
                     <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                         <MessageCircle class="w-5 h-5" />
-                        <input v-model="form.phone" type="text" placeholder="Enter Your WhatsApp Number"
+                        <input v-model="form.phone" type="text" :placeholder="$t('booking.whatsapp_placeholder')"
                             class="bg-transparent outline-none text-sm flex-1" />
-
                     </div>
-                    <p v-if="errors.phone" class="text-red-500 text-xs mt-1">
-                        {{ errors.phone }}
-                    </p>
+                    <p v-if="errors.phone" class="text-red-500 text-xs mt-1">{{ errors.phone }}</p>
 
                     <!-- Special Request -->
-                    <label class="text-sm font-semibold mb-1 block">Special Request</label>
+                    <label class="text-sm font-semibold mb-1 block">{{ $t('booking.special_request') }}</label>
                     <textarea v-model="form.specialRequest"
                         class="w-full border rounded-lg px-4 py-3 mb-6 text-sm h-28 resize-none bg-transparent" />
 
                     <!-- Total -->
                     <div class="text-center mb-4">
-                        <p class="text-[#666666] font-bold">Total Price</p>
+                        <p class="text-[#666666] font-bold">{{ $t('booking.total_price') }}</p>
                         <p class="text-primary-danger font-bold text-2xl">
-                            ${{ data?.price * form?.peopleCount }}
+                            €{{ data?.price * form?.peopleCount }}
                         </p>
                     </div>
 
@@ -222,88 +211,85 @@
                         </svg>
 
                         <span>
-                            {{ loading ? 'Processing...' : 'Request Booking' }}
+                            {{ loading ? $t('booking.processing') : $t('booking.submit') }}
                         </span>
                     </button>
+
                     <p class="text-[#666666] text-xs text-center mt-3">
-                        This is a booking request. our team will contact you to confirm availability.
+                        {{ $t('booking.disclaimer') }}
                     </p>
 
                 </div>
             </div>
-
         </div>
         <div class="bg-background">
             <section class="py-12 md:py-20 px-4">
                 <div class="max-w-7xl mx-auto">
 
+                    <!-- Reviews Header -->
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 md:mb-10">
                         <h2 class="text-xl md:text-3xl font-bold text-primary-foreground">
-                            Reviews
+                            {{ $t('reviews.title') }}
                         </h2>
                         <button @click="router.push(`/tripreview/${route.params.id}`)"
                             class="bg-primary-danger text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all shadow-sm border border-white/10">
-                            Write a review
+                            {{ $t('reviews.write_review') }}
                         </button>
                     </div>
 
                     <div class="divide-y divide-border">
-
-                        <div v-for="r in data?.reviews.filter(
-                            (r: any) => r.status === 'accepted'
-                        )" :key="r.id" class="py-6 flex flex-col md:flex-row gap-4 md:gap-6">
+                        <div v-for="r in data?.reviews.filter((r: any) => r.status === 'accepted')" :key="r.id"
+                            class="py-6 flex flex-col md:flex-row gap-4 md:gap-6">
 
                             <!-- Avatar (Initials) -->
                             <div
-                                class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary-foreground  text-white flex items-center justify-center font-bold flex-shrink-0">
-                                {{ r.userName?.trim()?.charAt(0)?.toUpperCase() || 'U' }}
+                                class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary-foreground text-white flex items-center justify-center font-bold flex-shrink-0">
+                                {{ r.userName?.trim()?.charAt(0)?.toUpperCase() || $t('reviews.anonymous').charAt(0) }}
                             </div>
 
                             <!-- Content -->
                             <div class="flex flex-col md:flex-row gap-3 md:gap-6 w-full">
-
-                                <!-- Left -->
+                                <!-- Left Info -->
                                 <div class="md:w-44 flex-shrink-0">
-
                                     <!-- Stars -->
                                     <div class="flex gap-0.5 mb-1">
-                                        <Star v-for="j in 5" :key="j" class="w-3.5 h-3.5" :class="j <= r.rating
-                                            ? 'text-yellow-400 fill-yellow-400'
-                                            : 'text-muted-foreground/30'" />
+                                        <Star v-for="j in 5" :key="j" class="w-3.5 h-3.5"
+                                            :class="j <= r.rating ? 'text-yellow-400 fill-yellow-400' : 'text-muted-foreground/30'" />
                                     </div>
 
                                     <!-- Name -->
                                     <div class="flex items-center gap-1.5">
                                         <span class="text-sm font-semibold text-[#666666]">
-                                            {{ r.userName }}
+                                            {{ r.userName || $t('reviews.anonymous') }}
                                         </span>
                                     </div>
 
                                     <!-- Date -->
                                     <p class="text-xs text-muted-foreground mt-0.5">
-                                        {{ r.date || 'Recently' }}
+                                        {{ r.date || $t('reviews.recently') }}
                                     </p>
                                 </div>
 
-                                <!-- Right -->
+                                <!-- Right Comment -->
                                 <div class="flex-1">
                                     <h3 class="font-bold text-primary-foreground text-sm md:text-base mb-1">
                                         {{ r.comment }}
                                     </h3>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
-                    <div class="max-w-7xl mx-auto">
 
-                        <h2 class="text-xl md:text-3xl font-bold text-primary-foreground  mb-4">
-                            Related tours
+                    <!-- Related Tours Section -->
+                    <div class="max-w-7xl mx-auto mt-12 md:mt-20">
+                        <h2 class="text-xl md:text-3xl font-bold text-primary-foreground mb-4">
+                            {{ $t('reviews.related_title') }}
                         </h2>
+
                         <UiCardLoader v-if="!data" />
+
                         <div class="grid md:grid-cols-3 gap-8" v-else>
-                            <div v-for="(trip, index) in relatetTrips" :key="index" :trip="trip">
+                            <div v-for="(trip, index) in relatetTrips" :key="index">
                                 <UiTripCard :trip="trip" />
                             </div>
                         </div>
@@ -314,7 +300,7 @@
         <section class="py-16 md:py-12 px-4">
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-2xl md:text-4xl font-bold text-primary-foreground  mb-12">
-                    Frequently Asked Question
+                    {{ $t('faqs.title') }}
                 </h2>
                 <div class="space-y-4">
                     <div v-for="(faq, i) in faqs" :key="i"
@@ -347,6 +333,10 @@ import { Star, CheckCheck, ChevronDown } from "lucide-vue-next";
 import { addItem } from "@/services/trips"
 import { getItems } from "~/services/trips";
 import { useRoute, useRouter } from "vue-router";
+import { useI18n } from "vue-i18n";
+
+
+const { t } = useI18n();
 const route = useRoute();
 const router = useRouter();
 const loading = ref(false)
@@ -378,38 +368,38 @@ const errors = reactive({
 const validateForm = () => {
     let isValid = true
 
-    // reset errors
+    // Reset errors
     Object.keys(errors).forEach((key) => {
         errors[key] = ''
     })
 
     if (!form.date) {
-        errors.date = 'Date is required'
+        errors.date = t('validation.date_required')
         isValid = false
     }
 
     if (!form.peopleCount || form.peopleCount < 1) {
-        errors.peopleCount = 'At least 1 guest is required'
+        errors.peopleCount = t('validation.guests_required')
         isValid = false
     }
 
     if (!form.hotel) {
-        errors.hotel = 'Hotel name is required'
+        errors.hotel = t('validation.hotel_required')
         isValid = false
     }
 
     if (!form.roomNumber) {
-        errors.roomNumber = 'Room number is required'
+        errors.roomNumber = t('validation.room_required')
         isValid = false
     }
 
     if (!form.name) {
-        errors.name = 'Full name is required'
+        errors.name = t('validation.name_required')
         isValid = false
     }
 
     if (!form.phone) {
-        errors.phone = 'WhatsApp number is required'
+        errors.phone = t('validation.phone_required')
         isValid = false
     }
 
@@ -421,7 +411,7 @@ const submitBooking = async () => {
     console.log('Booking:', "payload")
     console.log(validateForm())
     if (!validateForm()) {
-        addToast('Please fill required faild correctly', 'error')
+        addToast(t('validation.toast'), 'error')
         return
     } loading.value = true
     try {
