@@ -383,6 +383,17 @@
     "submit": "Request Booking",
     "processing": "Processing..."
   },
+  "vehicle": {
+    "smallPrivateCar": "Small Private Car",
+    "smallPrivateCarDesc": "Comfortable for individuals or couples",
+    "largePrivateCar": "Large Private Car",
+    "largePrivateCarDesc": "Spacious SUV for small families",
+    "microbus": "Microbus",
+    "microbusDesc": "Perfect for group travel and tours",
+    "seats4": "4 Seats",
+    "seats6": "6 Seats",
+    "seats1214": "12-14 Seats"
+  },
   "taxi": {
     "vv": "Book Transfer",
     "book": "How to book tansfer",

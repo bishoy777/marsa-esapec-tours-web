@@ -1,4 +1,15 @@
 {
+    "vehicle": {
+    "smallPrivateCar": "Kleiner Privatwagen",
+    "smallPrivateCarDesc": "Bequem für Einzelpersonen oder Paare",
+    "largePrivateCar": "Großer Privatwagen",
+    "largePrivateCarDesc": "Geräumiger SUV für kleine Familien",
+    "microbus": "Mikrobus",
+    "microbusDesc": "Perfekt für Gruppenreisen und Ausflüge",
+    "seats4": "4 Sitze",
+    "seats6": "6 Sitze",
+    "seats1214": "12–14 Sitze"
+  },
   "viewdetails": "Details anzeigen",
   "Quantity": "Menge",
   "person": "Person",

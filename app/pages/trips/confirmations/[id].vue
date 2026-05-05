@@ -129,7 +129,6 @@ const bookingInfo = computed(() => {
         [t('room_number'), data.value.roomNumber],
         [t('phone'), data.value.phone],
 
-
     ]
 })
 

@@ -56,6 +56,7 @@
                                 {{ row[1] }}
                             </span>
                         </div>
+
                         <div v-if="data.simCapacity">
                             <h2 class="font-bold text-primary-foreground mt-6 mb-3">
                                 sim card included
@@ -72,7 +73,7 @@
                         </div>
                         <!-- Total -->
                         <div class="flex justify-between mt-4 pt-2">
-                            <span class="font-bold text-primary-foreground">{{ 'total' }}</span>
+                            <span class="font-bold text-primary-foreground">{{ $t('total') }}</span>
                             <span class="font-bold text-primary-foreground">{{ data.totalPrice }} €</span>
                         </div>
                     </div>
@@ -120,22 +121,18 @@ const getTrips = async () => {
 
 
 const bookingInfo = computed(() => {
-    if (!data.value) return []
+  if (!data.value) return [];
 
-    return [
-        [
-            [t('taxi_page.summary.pickup_location'), data.value.taxi?.from],
-            [t('taxi_page.summary.dropoff_location'), data.value.taxi?.to],
-            [t('taxi_page.summary.date'), data.value.date],
-            [t('taxi_page.summary.guest'), `${data.value.peopleCount} ${t('taxi_page.summary.guest_suffix')}`],
-            [t('taxi_page.summary.room_flight'), data.value.flightroomNumber],
-            [t('taxi_page.summary.phone'), data.value.phone],
-            [t('taxi_page.summary.vehicle'), data.value.carType],
-            [t('taxi_page.summary.price'), `${transferPrice.value} €`]
-        ]
-
-
-    ]
+  return [
+    [t('taxi_page.summary.pickup_location'), data.value.taxi?.from],
+    [t('taxi_page.summary.dropoff_location'), data.value.taxi?.to],
+    [t('taxi_page.summary.date'), data.value.date],
+    [t('taxi_page.summary.guest'), `${data.value.peopleCount} ${t('taxi_page.summary.guest_suffix')}`],
+    [t('taxi_page.summary.room_flight'), data.value.flightroomNumber],
+    [t('taxi_page.summary.phone'), data.value.phone],
+    [t('taxi_page.summary.vehicle'), data.value.carType],
+    [t('taxi_page.summary.price'), `${transferPrice.value} €`]
+  ];
 });
 const simInfo = computed(() => {
     if (!data.value) return []
