@@ -19,6 +19,31 @@
   "hotel_name": "Hotel Name",
   "room_number": "Room Number",
   "phone": "Phone",
+  "review_page": {
+    "toasts": {
+      "success": "Review submitted successfully!",
+      "error": "Failed to submit review. Please try again."
+    },
+    "title": "Write a Review",
+    "subtitle": "Share your experience with this service",
+    "labels": {
+      "full_name": "Full Name",
+      "rating_question": "How Would You Rate Your Experience?",
+      "your_review": "Your Review"
+    },
+    "placeholders": {
+      "full_name": "Enter your full name",
+      "review_text": "Tell us about your experience"
+    },
+    "rating_descriptions": {
+      "1": "Very Bad",
+      "2": "Bad",
+      "3": "Good",
+      "4": "Very Good",
+      "5": "Excellent"
+    },
+    "submit_button": "Submit Review"
+  },
   "taxi_page": {
     "success_message": {
       "book_another": "Book Another Transfer"
