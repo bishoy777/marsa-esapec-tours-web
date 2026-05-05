@@ -218,9 +218,9 @@ import Facebook from "@/assets/svgs/facebook.svg"
 import Instagram from "@/assets/svgs/instagram.svg"
 import whatsapp from "@/assets/svgs/whatsapp.svg"
 import { ref } from 'vue';
-import { useI18n } from "vue-i18n";
 import { Globe, ChevronDown } from "lucide-vue-next";
-
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 const { locale, locales, setLocale } = useI18n();
 
 const changeLocale = async (event) => {
@@ -229,7 +229,7 @@ const changeLocale = async (event) => {
 const open = ref(false);
 
 
-const { t } = useI18n();
+
 
 const quickLinks = computed(() => [
     { name: t('footer.links.home'), path: "/" },

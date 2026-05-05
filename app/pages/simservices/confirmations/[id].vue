@@ -3,16 +3,21 @@
         <div class="px-4 sm:px-8 lg:px-24 pt-8">
             <nav class="flex items-center gap-2 text-sm text-primary-foreground mb-8">
                 <nuxt-link to="/" class="hover:text-foreground">
-                    Home
+                    {{ $t('sim_page.breadcrumb.home') }}
                 </nuxt-link>
 
                 <ChevronRight class="w-4 h-4" />
-                <span>Services</span>
+                <span>{{ $t('sim_page.breadcrumb.services') }}</span>
 
                 <ChevronRight class="w-4 h-4" />
-                <span class="text-foreground font-medium">sim card</span>
+                <span class="text-foreground font-medium">
+                    {{ $t('sim_page.breadcrumb.sim_card') }}
+                </span>
+
                 <ChevronRight class="w-4 h-4" />
-                <span class="text-foreground font-medium">request booking confirmation</span>
+                <span class="text-foreground font-medium">
+                    {{ $t('sim_page.breadcrumb.booking_confirmation') }}
+                </span>
             </nav>
         </div>
         <div class="max-w-4xl mx-auto px-4 pt-8">
@@ -27,16 +32,16 @@
                         </div>
 
                         <h1 class="text-2xl font-bold text-primary-foreground text mb-2">
-                            Booking Request Sent Successfully
+                            {{ $t('sim_page.success_message.title') }}
                         </h1>
 
                         <p class="text-[#666666] text-sm text-center">
-                            Thank You! our team will contact you shortly to confirm your trip details and pickup time.
+                            {{ $t('sim_page.success_message.description') }}
                         </p>
                     </div>
                     <div class="max-w-xl mx-auto border border-border rounded-lg p-6 mb-8">
                         <h2 class="font-bold text-primary-foreground mt-6 mb-3">
-                            SIM Package Summary
+                            {{ $t('sim_page.booking_card.summary_title') }}
                         </h2>
                         <div v-for="(row, i) in packageInfo" :key="i"
                             class="flex justify-between py-2.5 border-b border-border last:border-b-0">
@@ -49,7 +54,7 @@
                         </div>
                         <!-- Booking Info -->
                         <h2 class="font-bold text-primary-foreground mt-6 mb-3">
-                            SIM Package Summary
+                            {{ $t('sim_page.booking_card.summary_title') }}
                         </h2>
                         <div v-for="(row, i) in bookingInfo" :key="i"
                             class="flex justify-between py-2.5 border-b border-border last:border-b-0">
@@ -63,7 +68,7 @@
 
                         <!-- Total -->
                         <div class="flex justify-between mt-4 pt-2">
-                            <span class="font-bold text-primary-foreground">Total Price</span>
+                            <span class="font-bold text-primary-foreground">{{ $t('total') }} </span>
                             <span class="font-bold text-primary-foreground">{{ data.price
                                 }} €</span>
                         </div>
@@ -77,8 +82,8 @@
             <!-- CTA -->
             <div class="flex justify-center pb-12">
                 <nuxt-link to="/simservices"
-                    class="bg-primary-danger text-white  px-8 py-3 rounded-full font-medium hover:bg-primary-danger/90 transition-colors">
-                    Book Another sim card
+                    class="bg-primary-danger text-white px-8 py-3 rounded-full font-medium hover:bg-primary-danger/90 transition-colors">
+                    {{ $t('sim_page.success_message.book_another') }}
                 </nuxt-link>
             </div>
 
@@ -105,7 +110,8 @@ const getTrips = async () => {
         console.error(err)
     }
 }
-
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 /* ---------- Computed ---------- */
 const tripItems = computed(() => data.value?.trip?.included || [])
 const formatDate = (date) => {
@@ -119,19 +125,16 @@ const bookingInfo = computed(() => {
     if (!data.value) return []
 
     return [
-        ["Date", formatDate(data.value.date)],
-        ["delivery Location", data.value.deliveryLocation],
-        ["Room Number / Flight Number", data.value.roomNumber],
-
-
-
+        [t('date'), formatDate(data.value.date)],
+        [t('delivery_location'), data.value.deliveryLocation],
+        [t('roo'), data.value.roomNumber],
     ]
 })
 const packageInfo = computed(() => {
     if (!data.value) return []
     return [
-        ["Data Package", data.value.simPackage],
-        ["Number of SIM cards", data.value.cardsCount],
+        [t('aa'), data.value.simPackage],
+        [t('bb'), data.value.cardsCount],
     ]
 })
 

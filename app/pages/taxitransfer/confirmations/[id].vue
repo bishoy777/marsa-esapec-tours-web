@@ -3,16 +3,21 @@
         <div class="px-4 sm:px-8 lg:px-24 pt-8">
             <nav class="flex items-center gap-2 text-sm text-primary-foreground mb-8">
                 <nuxt-link to="/" class="hover:text-foreground">
-                    Home
+                    {{ $t('sim_page.breadcrumb.home') }}
                 </nuxt-link>
 
                 <ChevronRight class="w-4 h-4" />
-                <span>Services</span>
+                <span>{{ $t('sim_page.breadcrumb.services') }}</span>
 
                 <ChevronRight class="w-4 h-4" />
-                <span class="text-foreground font-medium">taxi transfer</span>
+                <span class="text-foreground font-medium">
+                    {{ $t('sim_page.breadcrumb.taxi_transfer') }}
+                </span>
+
                 <ChevronRight class="w-4 h-4" />
-                <span class="text-foreground font-medium">request booking confirmation</span>
+                <span class="text-foreground font-medium">
+                    {{ $t('sim_page.breadcrumb.booking_confirmation') }}
+                </span>
             </nav>
         </div>
         <div class="max-w-4xl mx-auto px-4 pt-8">
@@ -29,18 +34,18 @@
                         </div>
 
                         <h1 class="text-2xl font-bold text-primary-foreground text mb-2">
-                            Booking Request Sent Successfully
+                            {{ $t('sim_page.success_message.title') }}
                         </h1>
 
                         <p class="text-[#666666] text-sm text-center">
-                            Thank You! our team will contact you shortly to confirm your trip details and pickup time.
+                            {{ $t('sim_page.success_message.description') }}
                         </p>
                     </div>
                     <!-- Summary -->
 
                     <div class="max-w-xl mx-auto border border-border rounded-lg p-6 mb-8">
                         <h2 class="font-bold text-primary-foreground mt-6 mb-3">
-                            Booking Information
+                            {{ $t("last") }}
                         </h2>
                         <div v-for="(row, i) in bookingInfo" :key="i"
                             class="flex justify-between py-2.5 border-b border-border last:border-b-0">
@@ -67,7 +72,7 @@
                         </div>
                         <!-- Total -->
                         <div class="flex justify-between mt-4 pt-2">
-                            <span class="font-bold text-primary-foreground">Total Price</span>
+                            <span class="font-bold text-primary-foreground">{{ 'total' }}</span>
                             <span class="font-bold text-primary-foreground">{{ data.totalPrice }} €</span>
                         </div>
                     </div>
@@ -80,8 +85,8 @@
             <!-- CTA -->
             <div class="flex justify-center pb-12">
                 <nuxt-link to="/taxitransfer"
-                    class="bg-primary-danger text-white  px-8 py-3 rounded-full font-medium hover:bg-primary-danger/90 transition-colors">
-                    Book Another Transfer
+                    class="bg-primary-danger text-white px-8 py-3 rounded-full font-medium hover:bg-primary-danger/90 transition-colors">
+                    {{ $t('taxi_page.success_message.book_another') }}
                 </nuxt-link>
             </div>
 
@@ -92,7 +97,8 @@
 import { CheckCircle, ChevronRight, Check } from "lucide-vue-next"
 import { useRoute } from "vue-router"
 import { getItems } from "~/services/trips"
-
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 const route = useRoute()
 const data = ref(null)
 
@@ -117,14 +123,16 @@ const bookingInfo = computed(() => {
     if (!data.value) return []
 
     return [
-        ["Pickup Location", data.value.taxi?.from],
-        ["Drop-off Location", data.value.taxi?.to],
-        ["Date", data.value.date],
-        ["Guest", `${data.value.peopleCount} Guest`],
-        ["Room Number / Flight Number", data.value.flightroomNumber],
-        ["Phone", data.value.phone],
-        ["vehicle", data.value.carType],
-        ['Price', `${transferPrice.value} €`],
+        [
+            [t('taxi_page.summary.pickup_location'), data.value.taxi?.from],
+            [t('taxi_page.summary.dropoff_location'), data.value.taxi?.to],
+            [t('taxi_page.summary.date'), data.value.date],
+            [t('taxi_page.summary.guest'), `${data.value.peopleCount} ${t('taxi_page.summary.guest_suffix')}`],
+            [t('taxi_page.summary.room_flight'), data.value.flightroomNumber],
+            [t('taxi_page.summary.phone'), data.value.phone],
+            [t('taxi_page.summary.vehicle'), data.value.carType],
+            [t('taxi_page.summary.price'), `${transferPrice.value} €`]
+        ]
 
 
     ]
@@ -133,9 +141,9 @@ const simInfo = computed(() => {
     if (!data.value) return []
 
     return [
-        ["data package", data.value.simCapacity],
-        ["Number of SIM cards", data.value.simCards],
-        ["price", `${Number(data.value.totalPrice) - transferPrice.value} €`],
+        [t('aa'), data.value.simCapacity],
+        [t('bb'), data.value.simCards],
+        [t('taxi_page.summary.price'), `${Number(data.value.totalPrice) - transferPrice.value} €`],
 
     ]
 })

@@ -2,13 +2,39 @@
   "viewdetails": "View Details",
   "Quantity": "Quantity",
   "person": "Person",
+  "last": "Booking Information",
+  "asds": "Booking Information",
   "from": "From",
+  "tour": "Tour Included",
   "days": "days",
+  "total": "Total Price",
+  "od": " Book Another TOUR",
+  "aa": "Data Package",
+  "bb": "Number of SIM cards",
   "date": "Date",
+  "Recently": "Recently",
+  "roo": "Room Number / Flight Number",
+  "delivery_location": "Delivery Location",
   "guest": "Guest",
   "hotel_name": "Hotel Name",
   "room_number": "Room Number",
   "phone": "Phone",
+  "taxi_page": {
+    "success_message": {
+      "book_another": "Book Another Transfer"
+    },
+    "summary": {
+      "pickup_location": "Pickup Location",
+      "dropoff_location": "Drop-off Location",
+      "date": "Date",
+      "guest": "Guest",
+      "guest_suffix": "Guest",
+      "room_flight": "Room Number / Flight Number",
+      "phone": "Phone",
+      "vehicle": "vehicle",
+      "price": "Price"
+    }
+  },
   "nav": {
     "home": "Home",
     "trips": "Trips",
@@ -153,7 +179,7 @@
       "continue": "Continue Booking"
     },
     "form": {
-      "a":"This is a booking request. our team will contact you to confirm availability.",
+      "a": "This is a booking request. our team will contact you to confirm availability.",
       "title": "Booking Information",
       "name_label": "Full Name",
       "name_placeholder": "Enter your full name",
@@ -377,5 +403,83 @@
     "number": "WhatsApp Number",
     "a": "Enter Your Room | Flight Number"
   },
-  "to": "To"
+  "to": "To",
+  "sim_services": {
+    "hero": {
+      "title": "Sim cards",
+      "description": "Get a local SIM card delivered to you so you can enjoy fast internet during your trip."
+    }
+  },
+  "sim_page": {
+    "breadcrumb": {
+      "taxi_transfer": "taxi transfer",
+
+      "build_package": "Build Your Package",
+      "trip_details": "trip details",
+      "booking_confirmation": "Request booking confirmation",
+      "home": "Home",
+      "services": "Services",
+      "sim_card": "sim card"
+    },
+    "success_message": {
+      "book_another": "Book Another sim card",
+      "title": "Booking Request Sent Successfully",
+      "description": "Thank You! our team will contact you shortly to confirm your trip details and pickup time."
+    },
+    "title": "Stay Connected During Your Trip",
+    "description": "Stay connected throughout your trip in Egypt with a reliable local SIM card. Enjoy fast internet to use maps, contact friends and family, and share your travel moments online. Your SIM card can be delivered directly to the airport or your hotel for a smooth and easy start to your journey.",
+    "sections": {
+      "why_choose_title": "WHY CHOOSE OUR SIM CARDS",
+      "how_it_works_title": "How It Works"
+    },
+    "booking_card": {
+      "summary_title": "SIM Package Summary",
+      "header": "Book Sim Card",
+      "customize_title": "Customize Your Package",
+      "delivery_title": "Delivery Information",
+      "labels": {
+        "sim_package": "SIM Package",
+        "sim_package_placeholder": "Choose a plan",
+        "cards_count": "Number of SIM cards",
+        "delivery_location": "Delivery Location",
+        "date": "Date",
+        "room_flight": "Room Number | Flight Number",
+        "full_name": "Full Name",
+        "whatsapp_number": "WhatsApp Number",
+        "special_request": "Special Request"
+      },
+      "placeholders": {
+        "room_number": "Enter Your Room Number",
+        "full_name": "Enter your full name",
+        "whatsapp": "Enter Your WhatsApp Number"
+      },
+      "button": {
+        "default": "Request Booking",
+        "loading": "Processing..."
+      },
+      "errors": {
+        "sim_package_required": "Sim package is required",
+        "cards_count_min": "Cards count must be at least 1",
+        "delivery_location_required": "Delivery location is required",
+        "date_required": "Date is required",
+        "room_number_required": "Room number / Flight number is required",
+        "full_name_required": "Full name is required",
+        "phone_required": "Phone is required"
+      },
+
+      "footer_disclaimer": "This is a booking request. our team will contact you to confirm availability."
+    }
+  },
+  "whyChoose": {
+    "instant_activation": "Instant Activation",
+    "easy_communication": "Easy Communication",
+    "fast_connection": "Fast Connection & reliable 4G/5G coverage",
+    "reliable_service": "Reliable Local Service"
+  },
+  "howToBook": {
+    "step_1_online_request": "Request your SIM online",
+    "step_2_delivery_location": "Choose delivery location",
+    "step_3_receive_sim": "Receive it at the airport or hotel",
+    "step_4_start_using": "Start using the internet instantly"
+  }
 }
