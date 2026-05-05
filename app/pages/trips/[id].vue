@@ -408,8 +408,7 @@ const validateForm = () => {
 import { useToast } from "@/composables/useToast";
 const { addToast } = useToast()
 const submitBooking = async () => {
-    console.log('Booking:', "payload")
-    console.log(validateForm())
+
     if (!validateForm()) {
         addToast(t('validation.toast'), 'error')
         return

@@ -110,10 +110,10 @@ const getTrips = async () => {
     try {
         const res = await getItems(`taxibooking/${id}`)
         data.value = res.data
-        console.log(res.data)
+      
         transferPrice.value = data.value.carType == 'Microbus' ? data.value.taxi?.HighSprice : data.value.taxi?.sedanPrice
     } catch (err) {
-        console.error(err)
+      
     }
 }
 

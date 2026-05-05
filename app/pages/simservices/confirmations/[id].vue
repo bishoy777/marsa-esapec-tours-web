@@ -105,9 +105,9 @@ const getTrips = async () => {
     try {
         const res = await getItems(`simreservation/${id}`)
         data.value = res.data
-        console.log(data.value)
+      
     } catch (err) {
-        console.error(err)
+   
     }
 }
 import { useI18n } from "vue-i18n";

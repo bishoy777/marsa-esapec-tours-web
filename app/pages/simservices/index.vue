@@ -434,7 +434,7 @@ const submit = async () => {
         form.cardsCount = 1;
 
     } catch (err) {
-        console.error(err);
+     
     } finally {
         loading.value = false;
     }

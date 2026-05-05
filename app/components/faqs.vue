@@ -45,7 +45,7 @@ const getTrips = async () => {
     const res = await getItems('faqs')
 
     data.value = res.data
-    console.log("data.value")
+  
 
 
   } catch (err) { }

@@ -23,7 +23,7 @@ const getTrips = async () => {
 
         data.value = trips.slice(0, 3)
 
-        console.log(data.value)
+   
     } catch (err) { }
 }
 

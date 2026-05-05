@@ -112,7 +112,7 @@ const getTrips = async () => {
         const res = await getItems(`reservations/${id}`)
         data.value = res.data?.data ?? res.data
     } catch (err) {
-        console.error(err)
+   
     }
 }
 

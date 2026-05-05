@@ -721,7 +721,7 @@ const submitBooking = async () => {
     }
     form.taxiId = selectedTrip.value?.id
     loading.value = true;
-    console.log('Booking Details:', { ...form });
+  
     try {
         delete form.to
         delete form.from
@@ -752,7 +752,7 @@ const submitBooking = async () => {
     form.to = '';
     form.from = '';
 
-    console.log('Booking Details: after', { ...form });
+   
 };
 /* ---------- Static Data ---------- */
 import { useI18n } from "vue-i18n";

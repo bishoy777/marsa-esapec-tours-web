@@ -91,7 +91,7 @@ const submitReview = async () => {
         comment: review.value
     };
     const url = route.params.id == 1 ? "/taxireviews" : "/simcardreviews";
-    console.log(payload);
+  
     try {
         await addItem(url, payload);
         addToast(t('review_page.toasts.success'), "success");

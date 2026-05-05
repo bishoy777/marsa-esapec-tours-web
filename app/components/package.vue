@@ -95,11 +95,10 @@ const getTrips = async () => {
     try {
         const res = await getItems('trip')
         const trips = res.data?.data
-        console.log(trips)
-        console.log(res.data)
+    
         data.value = trips.filter(item => item.tripType?.id === 1)
 
-        console.log(data.value)
+    
     } catch (err) { }
 }
 </script>

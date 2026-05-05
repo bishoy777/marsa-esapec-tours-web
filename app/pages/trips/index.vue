@@ -85,7 +85,7 @@ const getTrips = async (name = "", perPage = 10) => {
 
         data.value = res.data?.data.filter(item => item.tripType?.id != 1);
     } catch (err) {
-        console.error(err)
+   
     } finally {
         loading.value = false
     }
