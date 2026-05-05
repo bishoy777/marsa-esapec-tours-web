@@ -82,12 +82,12 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 // We define the keys we want to pull from the 'about.features' object in JSON
-const features = {
+const features = computed(() => ({
   f1: t('about.features.f1'),
   f2: t('about.features.f2'),
   f3: t('about.features.f3'),
   f4: t('about.features.f4')
-};
+}));
 </script>
 
 <style scoped>

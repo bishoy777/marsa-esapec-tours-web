@@ -103,19 +103,16 @@
                         @click="open = false">
                         {{ $t('nav.buildPackage') }}
                     </NuxtLink>
-
                     <NuxtLink to="/taxitransfer" class="text-foreground transition-colors py-1"
                         active-class="text-secondary font-bold border-b-2 border-secondary self-start"
                         @click="open = false">
                         {{ $t('nav.taxiTransfers') }}
                     </NuxtLink>
-
                     <NuxtLink to="/simservices" class="text-foreground transition-colors py-1"
                         active-class="text-secondary font-bold border-b-2 border-secondary self-start"
                         @click="open = false">
                         {{ $t('nav.simServices') }}
                     </NuxtLink>
-
                     <!-- Bottom Actions -->
                     <div class="relative">
                         <button @click="showLocale = !showLocale" type="button"
@@ -124,7 +121,6 @@
                             <span>{{ currentLocale.code.toUpperCase() }}</span>
                             <ChevronDown class="w-3 h-3 absolute right-3 pointer-events-none" />
                         </button>
-
                         <div v-if="showLocale"
                             class="absolute left-0 mt-2 min-w-[150px] rounded-xl border border-border bg-white shadow-lg overflow-hidden z-50">
                             <button v-for="item in locales" :key="item.code"
