@@ -8,9 +8,21 @@ export default defineNuxtConfig({
     "@/assets/css/main.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
-  modules: ["@nuxtjs/tailwindcss", "nuxt-svgo"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-svgo", "@nuxtjs/i18n"],
   svgo: {
     defaultImport: "component", // This makes it work like vite-svg-loader
+  },
+  i18n: {
+    defaultLocale: "en",
+    strategy: "prefix_except_default",
+    langDir: "locales/",
+    locales: [
+      { code: "en", name: "English", file: "en.json" },
+      { code: "it", name: "Italiano", file: "it.json" },
+      { code: "pl", name: "Polski", file: "pl.json" },
+      { code: "de", name: "Deutsch", file: "de.json" },
+    ],
+    detectBrowserLanguage: false,
   },
   runtimeConfig: {
     apiSecret: process.env.apiBase,

@@ -2,7 +2,7 @@
   <section class="py-16 md:py-24 px-4" id="faqs">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-2xl md:text-4xl font-bold text-primary-foreground text-center mb-12">
-        Frequently Asked Question
+        {{ $t('faqs.title') }}
       </h2>
       <div class="space-y-4">
         <div v-for="(faq, i) in data" :key="i" class="border border-[#999999] rounded-xl transition-all duration-300">

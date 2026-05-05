@@ -38,12 +38,12 @@
                         <span class="text-primary-danger text-xl font-bold">
                             {{ trip?.price + '€' }}
                         </span>
-                        <span class="text-[#999999] text-sm">/Person</span>
+                        <span class="text-[#999999] text-sm">/{{ $t('person') }}</span>
                     </div>
                 </div>
                 <button @click="goToTrip(trip.id)"
                     class="mt-4 bg-primary-danger text-white font-semibold px-5 py-2 rounded-lg text-sm hover:opacity-90 transition-opacity">
-                    View Details
+                    {{ $t('viewdetails') }}
                 </button>
             </div>
         </div>

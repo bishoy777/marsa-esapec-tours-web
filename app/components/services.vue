@@ -1,24 +1,23 @@
 <template>
     <section class="px-4 py-12" id="services">
         <div class="max-w-6xl mx-auto">
-            <!-- Header Animation -->
+            <!-- Header -->
             <div class="transition-all duration-1000 transform opacity-100 translate-y-0">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary-foreground text-center mb-4">
-                    Our Services
+                    {{ $t('services_section.title') }}
                 </h2>
 
                 <p class="text-border text-center max-w-xl mx-auto mb-12">
-                    Everything you need to plan, explore, and enjoy your trip with ease. Smart services designed to make
-                    your travel experience simple from start to finish.
+                    {{ $t('services_section.subtitle') }}
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <div v-for="(service, index) in services" :key="index" class="group flex flex-col lg:flex-row gap-6 bg-background border border-border rounded-2xl p-6 shadow-sm 
-                           hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ease-out"
+                    hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ease-out"
                     :style="{ transitionDelay: `${index * 100}ms` }">
 
-                    <!-- Image with Scale Animation -->
+                    <!-- Image -->
                     <div class="overflow-hidden rounded-xl shrink-0">
                         <img :src="service.img"
                             class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
@@ -37,17 +36,17 @@
 
                         <ul class="space-y-2 mb-5">
                             <li v-for="(feature, i) in service.features" :key="i"
-                                class="flex items-center gap-2 text-sm text-[#666666] transform transition-all duration-500"
-                                :class="`group-hover:translate-x-1`" :style="{ transitionDelay: `${i * 50}ms` }">
+                                class="flex items-center gap-2 text-sm text-[#666666] transform transition-all duration-500 group-hover:translate-x-1"
+                                :style="{ transitionDelay: `${i * 50}ms` }">
                                 <CheckCircle class="w-4 h-4 text-primary animate-pulse" />
                                 {{ feature }}
                             </li>
                         </ul>
 
                         <nuxt-link :to="service.to" class="bg-primary-danger text-white font-semibold px-5 py-2 rounded-lg text-sm w-fit 
-                                    hover:shadow-lg hover:scale-105 active:scale-95 
-                                   transition-all duration-300">
-                            View Service
+                        hover:shadow-lg hover:scale-105 active:scale-95 
+                       transition-all duration-300">
+                            {{ $t('services_section.view_button') }}
                         </nuxt-link>
                     </div>
                 </div>
@@ -56,33 +55,35 @@
     </section>
 </template>
 <script setup>
-import {
-
-    CheckCircle,
-} from "lucide-vue-next";
+import { CheckCircle } from "lucide-vue-next";
 import taxitransfer from "@/assets/images/taxitransfer.png";
-import simservices from "@/assets/images/simservices.png"
+import simservices from "@/assets/images/simservices.png";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const services = [
     {
-        title: "Taxi Transfers",
-        description:
-            "Comfortable private transfers from marsa alam airport to your hotel and trips between destinations.",
+        title: t('services_section.taxi_title'),
+        description: t('services_section.taxi_desc'),
         img: taxitransfer,
         to: "/taxitransfer",
         features: [
-            "Pick-Up From Marsa Alam Airport",
-            "Private & Group Rides",
-            "Easy Booking",
-        ],
+            t('services_section.taxi_f1'),
+            t('services_section.taxi_f2'),
+            t('services_section.taxi_f3')
+        ]
     },
     {
-        title: "Tourist Internet SIM",
-        description:
-            "Stay connected during your trip with ready-to-use data packages delivered on arrival.",
+        title: t('services_section.sim_title'),
+        description: t('services_section.sim_desc'),
         img: simservices,
         to: "/simservices",
-        features: ["Stay Connected In Egypt", "Fast Activation", "Tourist-Friendly Plans"],
+        features: [
+            t('services_section.sim_f1'),
+            t('services_section.sim_f2'),
+            t('services_section.sim_f3')
+        ]
     },
 ];
 </script>

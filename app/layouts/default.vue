@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex  items-center justify-between px-4 sm:px-8 lg:px-24 py-4 z-50 ">
+    <nav class="flex items-center justify-between px-4 sm:px-8 lg:px-24 py-4 z-50 ">
         <!-- Logo -->
         <NuxtLink to="/"
             class="w-32 h-10 bg-muted rounded flex items-center justify-center text-muted-foreground text-sm">
@@ -22,120 +22,106 @@
         <div class="hidden md:flex items-center gap-8">
             <NuxtLink to="/" class="text-foreground hover:text-secondary transition-colors"
                 exact-active-class="text-secondary font-semibold border-b-2 border-secondary pb-1">
-                Home
+                {{ $t('nav.home') }}
             </NuxtLink>
 
             <NuxtLink to="/trips" class="text-foreground hover:text-secondary transition-colors"
                 active-class="text-secondary font-semibold border-b-2 border-secondary pb-1">
-                Trips
+                {{ $t('nav.trips') }}
             </NuxtLink>
 
             <NuxtLink to="/packages" class="text-foreground hover:text-secondary transition-colors"
                 active-class="text-secondary font-semibold border-b-2 border-secondary pb-1">
-                Packages
+                {{ $t('nav.packages') }}
             </NuxtLink>
 
             <NuxtLink to="/buildpackage" class="text-foreground hover:text-secondary transition-colors"
                 active-class="text-secondary font-semibold border-b-2 border-secondary pb-1">
-                Build Package
+                {{ $t('nav.buildPackage') }}
             </NuxtLink>
             <NuxtLink to="/taxitransfer" class="text-foreground hover:text-secondary transition-colors"
                 active-class="text-secondary font-semibold border-b-2 border-secondary pb-1">
-                Taxi Transfers
+                {{ $t('nav.taxiTransfers') }}
             </NuxtLink>
             <NuxtLink to="/simservices" class="text-foreground hover:text-secondary transition-colors"
                 active-class="text-secondary font-semibold border-b-2 border-secondary pb-1">
-                Tourist Internet SIM
+                {{ $t('nav.simServices') }}
             </NuxtLink>
         </div>
 
         <!-- Desktop Right -->
         <div class="hidden md:flex items-center gap-4">
-            <button class="flex items-center gap-1 text-foreground">
-                <Globe class="w-4 h-4" />
-                EN
-                <ChevronDown class="w-3 h-3" />
-            </button>
+            <div class="relative flex items-center">
+                <Globe class="w-4 h-4 absolute left-3 pointer-events-none" />
+
+                <select :value="locale" @change="changeLocale"
+                    class="appearance-none border border-foreground rounded-full pl-9 pr-8 py-2 text-sm bg-transparent text-foreground cursor-pointer">
+                    <option v-for="item in locales" :key="item.code" :value="item.code">
+                        {{ item.code.toUpperCase() }}
+                    </option>
+                </select>
+
+                <ChevronDown class="w-3 h-3 absolute right-3 pointer-events-none" />
+            </div>
 
             <button
                 class="border border-foreground rounded-full px-5 py-2 text-sm font-semibold text-foreground hover:bg-secondary hover:text-secondary-foreground transition-colors">
-                Get Started
+                {{ $t('nav.getStarted') }}
             </button>
         </div>
 
         <!-- Mobile Menu (slide down) -->
-  <transition name="slide-fade">
-    <div v-show="open"
-      class="md:hidden fixed z-50 bg-white top-14 mt-3 w-[calc(100%-2rem)] left-4 bg-surface rounded-xl shadow-xl p-5 border border-slate-100"
-    >
-      <div class="flex flex-col gap-4">
-        <!-- Navigation Links with NuxtLink Logic -->
-        <NuxtLink 
-          to="/" 
-          class="text-foreground transition-colors py-1"
-          exact-active-class="text-secondary font-bold border-b-2 border-secondary self-start"
-          @click="open = false"
-        >
-          Home
-        </NuxtLink>
+        <transition name="slide-fade">
+            <div v-show="open"
+                class="md:hidden fixed z-50 bg-white top-14 mt-3 w-[calc(100%-2rem)] left-4 bg-surface rounded-xl shadow-xl p-5 border border-slate-100">
+                <div class="flex flex-col gap-4">
+                    <NuxtLink to="/" class="text-foreground transition-colors py-1"
+                        exact-active-class="text-secondary font-bold border-b-2 border-secondary self-start"
+                        @click="open = false">
+                        {{ $t('nav.home') }}
+                    </NuxtLink>
 
-        <NuxtLink 
-          to="/trips" 
-          class="text-foreground transition-colors py-1"
-          active-class="text-secondary font-bold border-b-2 border-secondary self-start"
-          @click="open = false"
-        >
-          Trips
-        </NuxtLink>
+                    <NuxtLink to="/trips" class="text-foreground transition-colors py-1"
+                        active-class="text-secondary font-bold border-b-2 border-secondary self-start"
+                        @click="open = false">
+                        {{ $t('nav.trips') }}
+                    </NuxtLink>
 
-        <NuxtLink 
-          to="/packages" 
-          class="text-foreground transition-colors py-1"
-          active-class="text-secondary font-bold border-b-2 border-secondary self-start"
-          @click="open = false"
-        >
-          Packages
-        </NuxtLink>
+                    <NuxtLink to="/packages" class="text-foreground transition-colors py-1"
+                        active-class="text-secondary font-bold border-b-2 border-secondary self-start"
+                        @click="open = false">
+                        {{ $t('nav.packages') }}
+                    </NuxtLink>
 
-        <NuxtLink 
-          to="/buildpackage" 
-          class="text-foreground transition-colors py-1"
-          active-class="text-secondary font-bold border-b-2 border-secondary self-start"
-          @click="open = false"
-        >
-          Build Package
-        </NuxtLink>
+                    <NuxtLink to="/buildpackage" class="text-foreground transition-colors py-1"
+                        active-class="text-secondary font-bold border-b-2 border-secondary self-start"
+                        @click="open = false">
+                        {{ $t('nav.buildPackage') }}
+                    </NuxtLink>
 
-        <!-- Services section flattened to match desktop logic -->
-        <NuxtLink 
-          to="/taxitransfer" 
-          class="text-foreground transition-colors py-1"
-          active-class="text-secondary font-bold border-b-2 border-secondary self-start"
-          @click="open = false"
-        >
-          Taxi Transfers
-        </NuxtLink>
+                    <NuxtLink to="/taxitransfer" class="text-foreground transition-colors py-1"
+                        active-class="text-secondary font-bold border-b-2 border-secondary self-start"
+                        @click="open = false">
+                        {{ $t('nav.taxiTransfers') }}
+                    </NuxtLink>
 
-        <NuxtLink 
-          to="/simservices" 
-          class="text-foreground transition-colors py-1"
-          active-class="text-secondary font-bold border-b-2 border-secondary self-start"
-          @click="open = false"
-        >
-          Tourist Internet SIM
-        </NuxtLink>
+                    <NuxtLink to="/simservices" class="text-foreground transition-colors py-1"
+                        active-class="text-secondary font-bold border-b-2 border-secondary self-start"
+                        @click="open = false">
+                        {{ $t('nav.simServices') }}
+                    </NuxtLink>
 
-        <!-- Bottom Actions -->
-        <div class="flex items-center gap-3 pt-4 mt-2 border-t border-slate-100">
-          <button class="flex items-center gap-1 text-foreground font-medium">
-            <Globe class="w-4 h-4" />
-            EN
-            <ChevronDown class="w-3 h-3 text-slate-400" />
-          </button>
-        </div>
-      </div>
-    </div>
-  </transition>
+                    <!-- Bottom Actions -->
+                    <div class="flex items-center gap-3 pt-4 mt-2 border-t border-slate-100">
+                        <button class="flex items-center gap-1 text-foreground font-medium">
+                            <Globe class="w-4 h-4" />
+                            {{ locale.toUpperCase() }}
+                            <ChevronDown class="w-3 h-3 text-slate-400" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </transition>
     </nav>
     <slot></slot>
     <!-- Footer -->
@@ -150,18 +136,15 @@
                 </div>
 
                 <p class=" text-xs leading-relaxed mb-4">
-                    Your trusted travel partner for unforgettable experiences in Marsa Alam and beyond.
-                    Explore, customize, and send your booking request easily — we'll handle the rest.
+                    {{ $t('footer.description') }}
                 </p>
 
                 <div class="flex gap-3">
-                    <!-- Facebook -->
                     <a href="https://www.facebook.com/share/1BtV7JnRvn/" target="_blank"
                         class="w-8 h-8 rounded-full border border-border flex items-center justify-center cursor-pointer hover:bg-muted">
                         <Facebook class="w-4 h-4" />
                     </a>
 
-                    <!-- Instagram -->
                     <a href="https://www.instagram.com/marsaescapetours?igsh=MTJlcmczMmhpdGNoaA==" target="_blank"
                         class="w-8 h-8 rounded-full border border-border flex items-center justify-center cursor-pointer hover:bg-muted">
                         <Instagram class="w-4 h-4" />
@@ -171,7 +154,7 @@
 
             <!-- Quick Links -->
             <div>
-                <h4 class="font-semibold text-primary-foreground text-sm mb-4">Quick Links</h4>
+                <h4 class="font-semibold text-primary-foreground text-sm mb-4">{{ $t('footer.quickLinks') }}</h4>
                 <ul class="space-y-2">
                     <li v-for="l in quickLinks" :key="l.name">
                         <NuxtLink :to="l.path" class="text-primary-foreground text-sm hover:text-foreground transition">
@@ -181,7 +164,7 @@
                 </ul>
             </div>
             <div>
-                <h4 class="font-semibold text-foreground text-sm mb-4">Services</h4>
+                <h4 class="font-semibold text-foreground text-sm mb-4">{{ $t('footer.services') }}</h4>
                 <ul class="space-y-2">
                     <li v-for="l in services" :key="l.name">
                         <NuxtLink :to="l.path" class="text-primary-foreground text-sm hover:text-foreground transition">
@@ -199,7 +182,7 @@
 
             <!-- Support -->
             <div>
-                <h4 class="font-semibold text-primary-foreground text-sm mb-4">Support</h4>
+                <h4 class="font-semibold text-primary-foreground text-sm mb-4">{{ $t('footer.support') }}</h4>
                 <ul class="space-y-2">
                     <li v-for="l in support" :key="l.name">
                         <NuxtLink :to="l.path" class="text-primary-foreground text-sm hover:text-foreground transition">
@@ -210,10 +193,10 @@
             </div>
             <!-- Contact -->
             <div>
-                <h4 class="font-semibold text-primary-foreground text-sm mb-4">Contact</h4>
+                <h4 class="font-semibold text-primary-foreground text-sm mb-4">{{ $t('footer.contact') }}</h4>
                 <ul class="space-y-3">
                     <li class="flex items-center gap-2 text-primary-foreground text-sm">
-                        <MapPin class="w-4 h-4" /> Marsa Alam, Egypt
+                        <MapPin class="w-4 h-4" /> {{ $t('footer.location') }}
                     </li>
                     <li class="flex items-center gap-2 text-primary-foreground text-sm">
                         <Phone class="w-4 h-4" /> <a href="https://wa.me/201055330883" target="_blank">+20 105 533
@@ -224,7 +207,7 @@
         </div>
 
         <div class="max-w-6xl mx-auto mt-10 pt-6 border-t border-border text-center">
-            <p class="text-primary-foreground text-sm">© 2026 Marsa Escape Tours</p>
+            <p class="text-primary-foreground text-sm">{{ $t('footer.copyright') }}</p>
         </div>
     </footer>
 </template>
@@ -234,7 +217,15 @@ import Logo from "@/assets/svgs/marsaescapelogo.svg";
 import Facebook from "@/assets/svgs/facebook.svg"
 import Instagram from "@/assets/svgs/instagram.svg"
 import whatsapp from "@/assets/svgs/whatsapp.svg"
-import { ref } from 'vue'
+import { ref } from 'vue';
+import { useI18n } from "vue-i18n";
+import { Globe, ChevronDown } from "lucide-vue-next";
+
+const { locale, locales, setLocale } = useI18n();
+
+const changeLocale = async (event) => {
+    await setLocale(event.target.value);
+};
 const open = ref(false);
 const quickLinks = [
     { name: "Home", path: "/" },

@@ -26,12 +26,7 @@ const toastClass = (type: string) => {
             return "bg-blue-500"
     }
 }
-onMounted(() => {
-    console.log("toasts.value")
-})
-onUpdated(() => {
-    console.log('update')
-})
+
 </script>
 
 <style scoped>

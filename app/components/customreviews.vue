@@ -4,18 +4,19 @@
             <div class="max-w-4xl mx-auto">
 
                 <h2 class="text-2xl md:text-3xl font-bold text-secondary mb-10">
-                    Reviews
+                    {{ $t('reviewsSection.heading') }}
                 </h2>
 
                 <div class="divide-y divide-border">
-                    <div v-for="(r, i) in reviews" :key="i" class="py-6 flex gap-4 md:gap-6">
+                    <!-- Iterating over the local reviews object -->
+                    <div v-for="(r, key) in reviews" :key="key" class="py-6 flex gap-4 md:gap-6">
                         <!-- Avatar -->
                         <div class="w-14 h-14 rounded-full bg-muted-foreground/20 flex-shrink-0" />
 
                         <!-- Left -->
                         <div class="flex-shrink-0 w-36 md:w-44">
 
-                            <!-- Stars -->
+                            <!-- Stars (Ratings usually stay as numbers in code) -->
                             <div class="flex gap-0.5 mb-1">
                                 <Star v-for="j in 5" :key="j" class="w-3.5 h-3.5" :class="j <= r.rating
                                     ? 'text-yellow-400 fill-current'
@@ -56,28 +57,32 @@
 
 <script setup>
 import { Star, CheckCheck } from "lucide-vue-next";
+import { useI18n } from "vue-i18n";
 
-const reviews = [
-    {
-        name: "Arlene McCoy",
-        date: "2 October 2025",
-        rating: 4,
-        title: "Very Professional Service",
-        text: "Booking the taxi was simple and the team contacted us quickly to confirm everything. The driver was friendly and the vehicle was modern",
+const { t } = useI18n();
+
+// Pulling data from individual JSON keys into the component logic
+const reviews = {
+    rev1: {
+        name: t('reviewsSection.items.rev1.name'),
+        date: t('reviewsSection.items.rev1.date'),
+        rating: 4, // Logic values like ratings usually stay in the script
+        title: t('reviewsSection.items.rev1.title'),
+        text: t('reviewsSection.items.rev1.text'),
     },
-    {
-        name: "Arlene McCoy",
-        date: "2 October 2025",
+    rev2: {
+        name: t('reviewsSection.items.rev2.name'),
+        date: t('reviewsSection.items.rev2.date'),
         rating: 4,
-        title: "Very Professional Service",
-        text: "Booking the taxi was simple and the team contacted us quickly to confirm everything. The driver was friendly and the vehicle was modern",
+        title: t('reviewsSection.items.rev2.title'),
+        text: t('reviewsSection.items.rev2.text'),
     },
-    {
-        name: "Arlene McCoy",
-        date: "2 October 2025",
+    rev3: {
+        name: t('reviewsSection.items.rev3.name'),
+        date: t('reviewsSection.items.rev3.date'),
         rating: 4,
-        title: "Very Professional Service",
-        text: "Booking the taxi was simple and the team contacted us quickly to confirm everything. The driver was friendly and the vehicle was modern",
-    },
-];
+        title: t('reviewsSection.items.rev3.title'),
+        text: t('reviewsSection.items.rev3.text'),
+    }
+};
 </script>

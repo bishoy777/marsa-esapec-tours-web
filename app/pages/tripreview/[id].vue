@@ -82,7 +82,6 @@ const { addToast } = useToast();
 const route = useRoute();
 const rating = ref(4);
 const hovered = ref(0);
-
 const fullName = ref("");
 const review = ref("");
 

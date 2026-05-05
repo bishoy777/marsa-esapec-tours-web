@@ -196,7 +196,7 @@ const prevPreview = () => {
 
           <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
             <span class="text-white font-bold text-lg">
-              +{{ total - 8 }} Photos
+              {{ $t('gallery.morePhotos', { count: total - 8 }) }}
             </span>
           </div>
         </div>

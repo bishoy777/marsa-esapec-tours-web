@@ -10,12 +10,12 @@
                     <div class="w-8 h-8 rounded-full bg-muted-foreground/40 border-2 border-background" />
                 </div> -->
                 <span class="text-sm text-primary-foreground font-medium bg-muted px-3 py-1 rounded-full">
-                    Testimonials
+                    {{ $t('reviews.subtitle') }}
                 </span>
             </div>
 
             <h2 class="text-2xl md:text-4xl font-bold text-primary-foreground mb-12">
-                What Our Clients Are<br />Saying About Us?
+                {{ $t('reviews.title') }}
             </h2>
             <!-- Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

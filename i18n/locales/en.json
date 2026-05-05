@@ -1,0 +1,105 @@
+{
+  "viewdetails": "View Details",
+  "person": "Person",
+  "nav": {
+    "home": "Home",
+    "trips": "Trips",
+    "packages": "Packages",
+    "buildPackage": "Build Package",
+    "taxiTransfers": "Taxi Transfers",
+    "simServices": "Tourist Internet SIM",
+    "getStarted": "Get Started"
+  },
+  "footer": {
+    "description": "Your trusted travel partner for unforgettable experiences in Marsa Alam and beyond. Explore, customize, and send your booking request easily — we'll handle the rest.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "support": "Support",
+    "contact": "Contact",
+    "location": "Marsa Alam, Egypt",
+    "copyright": "© 2026 Marsa Escape Tours"
+  },
+  "gallery": {
+    "morePhotos": "+{count} Photos"
+  },
+  "about": {
+    "label": "Explore Our Story",
+    "title": "About Us",
+    "description1": "We are a local travel company based in Marsa Alam, helping international tourists discover the beauty of Egypt through carefully planned tours and packages.",
+    "description2": "From transportation and tour guides to SIM cards and local support, we take care of every detail to make your trip smooth, comfortable, and unforgettable.",
+    "experience": "Years of \n Experience",
+    "features": {
+      "f1": "Expert Local Tour Guides",
+      "f2": "Private & Secure Transportation",
+      "f3": "Customizable Travel Packages",
+      "f4": "24/7 Local Support"
+    }
+  },
+  "reviewsSection": {
+    "heading": "Reviews",
+    "items": {
+      "rev1": {
+        "name": "Arlene McCoy",
+        "date": "2 October 2025",
+        "title": "Very Professional Service",
+        "text": "Booking the taxi was simple and the team contacted us quickly to confirm everything. The driver was friendly and the vehicle was modern"
+      },
+      "rev2": {
+        "name": "Arlene McCoy",
+        "date": "2 October 2025",
+        "title": "Very Professional Service",
+        "text": "Booking the taxi was simple and the team contacted us quickly to confirm everything. The driver was friendly and the vehicle was modern"
+      },
+      "rev3": {
+        "name": "Arlene McCoy",
+        "date": "2 October 2025",
+        "title": "Very Professional Service",
+        "text": "Booking the taxi was simple and the team contacted us quickly to confirm everything. The driver was friendly and the vehicle was modern"
+      }
+    }
+  },
+  "featuredTrips": {
+    "title": "Our Featured trips",
+    "subtitle": "Discover the most exciting activities — from snorkeling and island trips to desert rides and historical excursions.",
+    "button": "See all trips"
+  },
+  "services_section": {
+    "title": "Our Services",
+    "subtitle": "Everything you need to plan, explore, and enjoy your trip with ease. Smart services designed to make your travel experience simple from start to finish.",
+    "view_button": "View Service",
+    "taxi_title": "Taxi Transfers",
+    "taxi_desc": "Comfortable private transfers from marsa alam airport to your hotel and trips between destinations.",
+    "taxi_f1": "Pick-Up From Marsa Alam Airport",
+    "taxi_f2": "Private & Group Rides",
+    "taxi_f3": "Easy Booking",
+    "sim_title": "Tourist Internet SIM",
+    "sim_desc": "Stay connected during your trip with ready-to-use data packages delivered on arrival.",
+    "sim_f1": "Stay Connected In Egypt",
+    "sim_f2": "Fast Activation",
+    "sim_f3": "Tourist-Friendly Plans"
+  },
+  "packages": {
+    "title": "Our Packages",
+    "subtitle": "Stay, explore, and experience more with curated travel bundles that combine top destinations and seamless planning.",
+    "see_all": "See all packages",
+    "builder": {
+      "title": "Build Your Package",
+      "description": "Choose how many days you want, explore available trips, and create your perfect package in minutes.",
+      "button": "Let's Build Your Package"
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions"
+  },
+  "reviews": {
+    "subtitle": "What Our Clients Are Saying About Us?",
+    "title": "Testimonials"
+  },
+  "hero": {
+    "title_part1": "Discover",
+    "title_highlight": "Unforgettable",
+    "title_part2": "Adventures In Marsa Alam & Beyond",
+    "subtitle": "Pack your bags and let us redefine your travel experience. Where every journey is a story waiting to be told.",
+    "button": "Explore Trips"
+  }
+}
