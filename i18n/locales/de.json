@@ -514,5 +514,15 @@
     "step_2_delivery_location": "Lieferort wählen",
     "step_3_receive_sim": "Am Flughafen oder Hotel erhalten",
     "step_4_start_using": "Sofort lossurfen"
+  },
+  "errors": {
+    "simCapacity": "Sim ist erforderlich",
+    "sim_package_required": "SIM-Paket ist erforderlich",
+    "cards_count_min": "Anzahl muss mindestens 1 sein",
+    "delivery_location_required": "Lieferort ist erforderlich",
+    "date_required": "Datum ist erforderlich",
+    "room_number_required": "Zimmer- / Flugnummer ist erforderlich",
+    "full_name_required": "Vollständiger Name ist erforderlich",
+    "phone_required": "Telefonnummer ist erforderlich"
   }
 }

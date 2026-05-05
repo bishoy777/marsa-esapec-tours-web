@@ -503,6 +503,16 @@
       "footer_disclaimer": "Questa è una richiesta di prenotazione. Il nostro team ti contatterà per confermare la disponibilità."
     }
   },
+  "errors": {
+    "simCapacity": "Il è obbligatorio",
+    "sim_package_required": "Il pacchetto SIM è obbligatorio",
+    "cards_count_min": "Il numero di schede deve essere almeno 1",
+    "delivery_location_required": "Il luogo di consegna è obbligatorio",
+    "date_required": "La data è obbligatoria",
+    "room_number_required": "Il numero di camera / volo è obbligatorio",
+    "full_name_required": "Il nome completo è obbligatorio",
+    "phone_required": "Il telefono è obbligatorio"
+  },
   "whyChoose": {
     "instant_activation": "Attivazione Istantanea",
     "easy_communication": "Comunicazione Facile",

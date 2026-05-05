@@ -372,37 +372,37 @@ const validateForm = () => {
     Object.keys(errors).forEach((key) => (errors[key] = ""));
 
     if (!form.simPackage) {
-        errors.simPackage = t('sim_page.errors.sim_package_required');
+        errors.simPackage = t('errors.sim_package_required');
         valid = false;
     }
 
     if (!form.cardsCount || form.cardsCount < 1) {
-        errors.cardsCount = t('sim_page.errors.cards_count_min');
+        errors.cardsCount = t('errors.cards_count_min');
         valid = false;
     }
 
     if (!form.deliveryLocation) {
-        errors.deliveryLocation = t('sim_page.errors.delivery_location_required');
+        errors.deliveryLocation = t('errors.delivery_location_required');
         valid = false;
     }
 
     if (!form.date) {
-        errors.date = t('sim_page.errors.date_required');
+        errors.date = t('errors.date_required');
         valid = false;
     }
 
     if (!form.roomNumber) {
-        errors.roomNumber = t('sim_page.errors.room_number_required');
+        errors.roomNumber = t('errors.room_number_required');
         valid = false;
     }
 
     if (!form.fullName) {
-        errors.fullName = t('sim_page.errors.full_name_required');
+        errors.fullName = t('errors.full_name_required');
         valid = false;
     }
 
     if (!form.phone) {
-        errors.phone = t('sim_page.errors.phone_required');
+        errors.phone = t('errors.phone_required');
         valid = false;
     }
 

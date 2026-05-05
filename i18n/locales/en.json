@@ -1,4 +1,14 @@
 {
+  "errors": {
+    "simCapacity": "Sim Capacity is required",
+    "sim_package_required": "Sim package is required",
+    "cards_count_min": "Cards count must be at least 1",
+    "delivery_location_required": "Delivery location is required",
+    "date_required": "Date is required",
+    "room_number_required": "Room number / Flight number is required",
+    "full_name_required": "Full name is required",
+    "phone_required": "Phone is required"
+  },
   "viewdetails": "View Details",
   "Quantity": "Quantity",
   "person": "Person",
@@ -494,7 +504,7 @@
         "loading": "Processing..."
       },
       "errors": {
-        "simCapacity":"Sim Capacity is required",
+        "simCapacity": "Sim Capacity is required",
         "sim_package_required": "Sim package is required",
         "cards_count_min": "Cards count must be at least 1",
         "delivery_location_required": "Delivery location is required",
