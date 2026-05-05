@@ -13,11 +13,24 @@
   "footer": {
     "description": "Your trusted travel partner for unforgettable experiences in Marsa Alam and beyond. Explore, customize, and send your booking request easily — we'll handle the rest.",
     "quickLinks": "Quick Links",
-    "services": "Services",
-    "support": "Support",
     "contact": "Contact",
     "location": "Marsa Alam, Egypt",
-    "copyright": "© 2026 Marsa Escape Tours"
+    "copyright": "© 2026 Marsa Escape Tours",
+    "links": {
+      "home": "Home",
+      "trips": "Trips",
+      "services": "Services",
+      "packages": "Packages",
+      "plan_trip": "Plan Your Trip"
+    },
+    "services": {
+      "taxi": "Taxi Transfer",
+      "sim": "Sim Card"
+    },
+    "support": {
+      "faq": "FAQ",
+      "reviews": "Reviews"
+    }
   },
   "gallery": {
     "morePhotos": "+{count} Photos"
@@ -94,7 +107,8 @@
     "no_results_title": "No trips found",
     "no_results_subtitle": "Try adjusting your search or filters",
     "load_more": "Load more"
-  },"build_package": {
+  },
+  "build_package": {
     "title": "Build Your Package",
     "description": "Choose how many days you want, explore available trips, and create your perfect package in minutes.",
     "cta_button": "Let's Build Your Package",

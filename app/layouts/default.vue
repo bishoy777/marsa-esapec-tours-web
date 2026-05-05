@@ -227,24 +227,27 @@ const changeLocale = async (event) => {
     await setLocale(event.target.value);
 };
 const open = ref(false);
-const quickLinks = [
-    { name: "Home", path: "/" },
-    { name: "Trips", path: "/trips" },
-    { name: "Services", path: "/#services" },
-    { name: "Package", path: "/packages" },
-    { name: "Plan Your Trip", path: "/buildpackage" },
 
-];
 
-const services = [
-    { name: "Taxi Transfer", path: "/taxitransfer" },
-    { name: "Sim Card", path: "/simservices" },
-];
-const support = [
-    { name: "FAQ", path: "/#faqs" },
-    { name: "Reviews", path: "/#reviews" },
+const { t } = useI18n();
 
-];
+const quickLinks = computed(() => [
+    { name: t('footer.links.home'), path: "/" },
+    { name: t('footer.links.trips'), path: "/trips" },
+    { name: t('footer.links.services'), path: "/#services" },
+    { name: t('footer.links.packages'), path: "/packages" },
+    { name: t('footer.links.plan_trip'), path: "/buildpackage" },
+]);
+
+const services = computed(() => [
+    { name: t('footer.services.taxi'), path: "/taxitransfer" },
+    { name: t('footer.services.sim'), path: "/simservices" },
+]);
+
+const support = computed(() => [
+    { name: t('footer.support.faq'), path: "/#faqs" },
+    { name: t('footer.support.reviews'), path: "/#reviews" },
+]);
 
 </script>
 
