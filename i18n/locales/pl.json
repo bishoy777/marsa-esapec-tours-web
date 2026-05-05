@@ -1,1 +1,506 @@
-{}
+{
+  "viewdetails": "Zobacz szczegóły",
+  "Quantity": "Ilość",
+  "person": "Osoba",
+  "last": "Informacje o rezerwacji",
+  "asds": "Informacje o rezerwacji",
+  "from": "Od",
+  "tour": "Wycieczka w cenie",
+  "days": "dni",
+  "total": "Cena całkowita",
+  "od": "Zarezerwuj kolejną WYCIECZKĘ",
+  "aa": "Pakiet danych",
+  "bb": "Liczba kart SIM",
+  "date": "Data",
+  "Recently": "Ostatnio",
+  "roo": "Numer pokoju / Numer lotu",
+  "delivery_location": "Miejsce dostawy",
+  "guest": "Gość",
+  "hotel_name": "Nazwa hotelu",
+  "room_number": "Numer pokoju",
+  "phone": "Telefon",
+  "review_page": {
+    "toasts": {
+      "success": "Recenzja została przesłana pomyślnie!",
+      "error": "Nie udało się przesłać recenzji. Spróbuj ponownie."
+    },
+    "title": "Napisz recenzję",
+    "subtitle": "Podziel się swoimi wrażeniami z tej usługi",
+    "labels": {
+      "full_name": "Imię i nazwisko",
+      "rating_question": "Jak oceniasz swoje doświadczenie?",
+      "your_review": "Twoja recenzja"
+    },
+    "placeholders": {
+      "full_name": "Wpisz swoje imię i nazwisko",
+      "review_text": "Opowiedz nam o swoich wrażeniach"
+    },
+    "rating_descriptions": {
+      "1": "Bardzo słabo",
+      "2": "Słabo",
+      "3": "Dobrze",
+      "4": "Bardzo dobrze",
+      "5": "Doskonale"
+    },
+    "submit_button": "Prześlij recenzję"
+  },
+  "taxi_page": {
+    "success_message": {
+      "book_another": "Zarezerwuj kolejny transfer"
+    },
+    "summary": {
+      "pickup_location": "Miejsce odbioru",
+      "dropoff_location": "Miejsce docelowe",
+      "date": "Data",
+      "guest": "Gość",
+      "guest_suffix": "Gość",
+      "room_flight": "Numer pokoju / Numer lotu",
+      "phone": "Telefon",
+      "vehicle": "pojazd",
+      "price": "Cena"
+    }
+  },
+  "nav": {
+    "home": "Strona główna",
+    "trips": "Wycieczki",
+    "packages": "Pakiety",
+    "buildPackage": "Stwórz pakiet",
+    "taxiTransfers": "Transfery taksówką",
+    "simServices": "Turystyczna karta SIM",
+    "getStarted": "Zacznij teraz"
+  },
+  "footer": {
+    "description": "Twój zaufany partner w podróży, zapewniający niezapomniane wrażenia w Marsa Alam i nie tylko. Eksploruj, personalizuj i łatwo wysyłaj zapytania o rezerwację — my zajmiemy się resztą.",
+    "quickLinks": "Szybkie linki",
+    "contact": "Kontakt",
+    "location": "Marsa Alam, Egipt",
+    "copyright": "© 2026 Marsa Escape Tours",
+    "links": {
+      "home": "Strona główna",
+      "trips": "Wycieczki",
+      "services": "Usługi",
+      "packages": "Pakiety",
+      "plan_trip": "Zaplanuj podróż"
+    },
+    "services": {
+      "taxi": "Transfer taksówką",
+      "sim": "Karta SIM"
+    },
+    "support": {
+      "faq": "FAQ",
+      "reviews": "Recenzje"
+    },
+    "write_review": "Napisz recenzję"
+  },
+  "gallery": {
+    "morePhotos": "+{count} Zdjęć"
+  },
+  "about": {
+    "label": "Poznaj naszą historię",
+    "title": "O nas",
+    "description1": "Jesteśmy lokalnym biurem podróży z siedzibą w Marsa Alam, pomagającym turystom z całego świata odkrywać piękno Egiptu poprzez starannie zaplanowane wycieczki i pakiety.",
+    "description2": "Od transportu i przewodników po karty SIM i lokalne wsparcie – dbamy o każdy szczegół, aby Twoja podróż była płynna, komfortowa i niezapomniana.",
+    "experience": "Lata \n doświadczenia",
+    "features": {
+      "f1": "Eksperccy lokalni przewodnicy",
+      "f2": "Prywatny i bezpieczny transport",
+      "f3": "Pakiety podróżne z możliwością dostosowania",
+      "f4": "Lokalne wsparcie 24/7"
+    }
+  },
+  "reviewsSection": {
+    "heading": "Recenzje",
+    "items": {
+      "rev1": {
+        "name": "Arlene McCoy",
+        "date": "2 października 2025",
+        "title": "Bardzo profesjonalna obsługa",
+        "text": "Rezerwacja taksówki była prosta, a zespół szybko skontaktował się z nami, aby wszystko potwierdzić. Kierowca był uprzejmy, a pojazd nowoczesny."
+      },
+      "rev2": {
+        "name": "Arlene McCoy",
+        "date": "2 października 2025",
+        "title": "Bardzo profesjonalna obsługa",
+        "text": "Rezerwacja taksówki była prosta, a zespół szybko skontaktował się z nami, aby wszystko potwierdzić. Kierowca był uprzejmy, a pojazd nowoczesny."
+      },
+      "rev3": {
+        "name": "Arlene McCoy",
+        "date": "2 października 2025",
+        "title": "Bardzo profesjonalna obsługa",
+        "text": "Rezerwacja taksówki była prosta, a zespół szybko skontaktował się z nami, aby wszystko potwierdzić. Kierowca był uprzejmy, a pojazd nowoczesny."
+      }
+    }
+  },
+  "featuredTrips": {
+    "title": "Nasze polecane wycieczki",
+    "subtitle": "Odkryj najbardziej ekscytujące aktywności — od snorkelingu i wycieczek na wyspy po wyprawy pustynne i historyczne eskapady.",
+    "button": "Zobacz wszystkie wycieczki"
+  },
+  "services_section": {
+    "title": "Nasze usługi",
+    "subtitle": "Wszystko, czego potrzebujesz, aby z łatwością planować, zwiedzać i cieszyć się podróżą. Inteligentne usługi zaprojektowane tak, aby ułatwić podróżowanie od początku do końca.",
+    "view_button": "Zobacz usługę",
+    "taxi_title": "Transfery taksówką",
+    "taxi_desc": "Wygodne prywatne transfery z lotniska Marsa Alam do hotelu oraz przejazdy między lokalizacjami.",
+    "taxi_f1": "Odbiór z lotniska Marsa Alam",
+    "taxi_f2": "Przejazdy prywatne i grupowe",
+    "taxi_f3": "Łatwa rezerwacja",
+    "sim_title": "Turystyczna karta SIM",
+    "sim_desc": "Bądź w kontakcie podczas podróży dzięki gotowym pakietom danych dostarczanym po przyjeździe.",
+    "sim_f1": "Pozostań w kontakcie w Egipcie",
+    "sim_f2": "Szybka aktywacja",
+    "sim_f3": "Plany przyjazne turystom"
+  },
+  "packages": {
+    "title": "Nasze pakiety",
+    "subtitle": "Zostań dłużej i doświadcz więcej dzięki pakietom łączącym najlepsze miejsca z bezproblemowym planowaniem.",
+    "see_all": "Zobacz wszystkie pakiety",
+    "builder": {
+      "title": "Stwórz swój pakiet",
+      "description": "Wybierz liczbę dni, sprawdź dostępne wycieczki i stwórz swój idealny pakiet w kilka minut.",
+      "button": "Stwórzmy Twój pakiet"
+    },
+    "hero_title": "Nasze pakiety",
+    "search_label": "Znajdź swoją przygodę",
+    "search_placeholder": "Szukaj po nazwie wycieczki...",
+    "search_button": "Szukaj",
+    "no_results_title": "Nie znaleziono wycieczek",
+    "no_results_subtitle": "Spróbuj zmienić parametry wyszukiwania lub filtry",
+    "load_more": "Wczytaj więcej"
+  },
+  "build_package": {
+    "title": "Stwórz swój pakiet",
+    "description": "Wybierz liczbę dni, sprawdź dostępne wycieczki i stwórz swój idealny pakiet w kilka minut.",
+    "cta_button": "Stwórzmy Twój pakiet",
+    "instant_booking": "Błyskawiczna",
+    "booking_sub": "Rezerwacja",
+    "steps": {
+      "days": "Wybierz liczbę dni",
+      "trips": "Przeglądaj dostępne wycieczki",
+      "create": "Stwórz swój pakiet"
+    },
+    "nav": {
+      "home": "Strona główna",
+      "current": "stwórz swój pakiet"
+    },
+    "stepss": {
+      "step1": "Wybierz wycieczkę",
+      "step2": "Informacje o rezerwacji",
+      "step3": "Sukces"
+    },
+    "step1": {
+      "title": "Wybierz wycieczkę",
+      "selected": "Wybrano",
+      "select": "Wybierz",
+      "from": "Od",
+      "per_person": "/Osobę"
+    },
+    "summary": {
+      "title": "Podsumowanie pakietu",
+      "subtitle": "Twoja wybrana wycieczka",
+      "remove": "Usuń",
+      "subtotal": "Suma częściowa",
+      "total": "Suma",
+      "continue": "Kontynuuj rezerwację"
+    },
+    "form": {
+      "a": "To jest zapytanie o rezerwację. Nasz zespół skontaktuje się z Tobą, aby potwierdzić dostępność.",
+      "title": "Informacje o rezerwacji",
+      "name_label": "Imię i nazwisko",
+      "name_placeholder": "Wpisz swoje imię i nazwisko",
+      "phone_label": "Numer WhatsApp",
+      "phone_placeholder": "Wpisz swój numer",
+      "date_label": "Data",
+      "guests_label": "Gość",
+      "hotel_label": "Hotel",
+      "hotel_placeholder": "Nazwa hotelu",
+      "room_label": "Numer pokoju",
+      "special_label": "Prośby specjalne",
+      "special_placeholder": "Dodatkowe uwagi...",
+      "submit": "Poproś o rezerwację",
+      "processing": "Przetwarzanie..."
+    },
+    "success": {
+      "title": "Zapytanie o rezerwację wysłane pomyślnie",
+      "description": "Dziękujemy! Nasz zespół skontaktuje się z Tobą wkrótce, aby potwierdzić szczegóły wycieczki i godzinę odbioru.",
+      "summary_title": "podsumowanie pakietu",
+      "info_title": "Informacje o rezerwacji",
+      "total_price": "Cena całkowita",
+      "new_package": "Stwórz nowy pakiet"
+    }
+  },
+  "faqs": {
+    "title": "Najczęściej zadawane pytania"
+  },
+  "reviews": {
+    "subtitle": "Co nasi klienci mówią o nas?",
+    "title": "Recenzje",
+    "write_review": "Napisz recenzję",
+    "recently": "Ostatnio",
+    "anonymous": "Użytkownik",
+    "related_title": "Powiązane wycieczki"
+  },
+  "hero": {
+    "title_part1": "Odkryj",
+    "title_highlight": "Niezapomniane",
+    "title_part2": "Przygody w Marsa Alam i nie tylko",
+    "subtitle": "Spakuj walizki i pozwól nam zdefiniować na nowo Twoje wrażenia z podróży. Gdzie każda wyprawa jest historią czekającą na opowiedzenie.",
+    "button": "Odkryj wycieczki"
+  },
+  "all_trips": {
+    "hero_title": "Wszystkie wycieczki",
+    "search_placeholder": "Szukaj po nazwie wycieczki...",
+    "search_button": "Szukaj",
+    "no_results": "Nie znaleziono wycieczek",
+    "no_results_sub": "Spróbuj zmienić parametry wyszukiwania lub filtry",
+    "load_more": "Wczytaj więcej"
+  },
+  "trip_details": {
+    "nav_home": "Strona główna",
+    "nav_all_trips": "Wszystkie wycieczki",
+    "overview": "Przegląd",
+    "highlights": "Najciekawsze punkty programu",
+    "itinerary": "Plan podróży",
+    "morning": "Rano",
+    "afternoon": "Wycieczka popołudniowa",
+    "evening": "Wieczór",
+    "included": "W cenie",
+    "not_included": "Brak w cenie",
+    "book_title": "Zarezerwuj tę wycieczkę",
+    "from": "Od",
+    "per_person": "/osobę",
+    "details_heading": "Szczegóły wycieczki",
+    "total_price": "Cena całkowita",
+    "booking_disclaimer": "To jest zapytanie o rezerwację. Nasz zespół skontaktuje się z Tobą, aby potwierdzić dostępność.",
+    "reviews_title": "Recenzje",
+    "write_review": "Napisz recenzję",
+    "related_tours": "Powiązane wycieczki",
+    "faq_title": "Często zadawane pytania",
+    "form": {
+      "date": "Data",
+      "guests": "Goście",
+      "hotel": "Hotel",
+      "hotel_placeholder": "Wpisz nazwę swojego hotelu",
+      "room": "Numer pokoju",
+      "room_placeholder": "Wpisz numer swojego pokoju",
+      "name": "Imię i nazwisko",
+      "name_placeholder": "Wpisz swoje imię i nazwisko",
+      "whatsapp": "Numer WhatsApp",
+      "whatsapp_placeholder": "Wpisz swój numer WhatsApp",
+      "request": "Prośba specjalna",
+      "submit": "Poproś o rezerwację",
+      "processing": "Przetwarzanie..."
+    }
+  },
+  "booking": {
+    "title": "Zarezerwuj tę wycieczkę",
+    "from": "Od",
+    "per_person": "/osobę",
+    "details_title": "Szczegóły wycieczki",
+    "date": "Data",
+    "guests": "Gość",
+    "hotel": "Hotel",
+    "hotel_placeholder": "Wpisz nazwę swojego hotelu",
+    "room": "Numer pokoju",
+    "room_placeholder": "Wpisz numer swojego pokoju",
+    "name": "Imię i nazwisko",
+    "name_placeholder": "Wpisz swoje imię i nazwisko",
+    "whatsapp": "Numer WhatsApp",
+    "whatsapp_placeholder": "Wpisz swój numer WhatsApp",
+    "special_request": "Prośba specjalna",
+    "total_price": "Cena całkowita",
+    "submit": "Poproś o rezerwację",
+    "processing": "Przetwarzanie...",
+    "disclaimer": "To jest zapytanie o rezerwację. Nasz zespół skontaktuje się z Tobą, aby potwierdzić dostępność.",
+    "Overview": "Przegląd",
+    "TourHighlights": "Najciekawsze punkty programu",
+    "Itinerary": "Plan podróży",
+    "Morning": "Rano",
+    "Afternoon": "Wycieczka popołudniowa",
+    "Evening": "Wieczór",
+    "Included": "W cenie",
+    "NotIncluded": "Brak w cenie",
+    "Reviews": "Recenzje",
+    "WriteReview": "Napisz recenzję",
+    "RelatedTours": "Powiązane wycieczki"
+  },
+  "breadcrumbs": {
+    "all_trips": "Wszystkie wycieczki",
+    "home": "Strona główna",
+    "build_package": "Stwórz swój pakiet"
+  },
+  "success": {
+    "title": "Zapytanie o rezerwację wysłane pomyślnie",
+    "description": "Dziękujemy! Nasz zespół skontaktuje się z Tobą wkrótce, aby potwierdzić szczegóły wycieczki i godzinę odbioru.",
+    "package_summary": "Podsumowanie pakietu",
+    "booking_info": "Informacje o rezerwacji",
+    "total_price": "Cena całkowita",
+    "build_new": "Stwórz nowy pakiet"
+  },
+  "validation": {
+    "date_required": "Data jest wymagana",
+    "guests_required": "Wymagany jest co najmniej 1 gość",
+    "hotel_required": "Nazwa hotelu jest wymagana",
+    "room_required": "Numer pokoju jest wymagany",
+    "name_required": "Imię i nazwisko są wymagane",
+    "phone_required": "Numer WhatsApp jest wymagany",
+    "toast": "Proszę poprawnie wypełnić wymagane pola",
+    "date": "Proszę wybrać datę.",
+    "to": "Proszę wybrać miejsce docelowe.",
+    "from": "Proszę wybrać miejsce wyjazdu.",
+    "carType": "Proszę wybrać typ pojazdu.",
+    "peopleCount": "Proszę podać liczbę gości.",
+    "flightroomNumber": "Proszę podać poprawny numer pokoju/lotu.",
+    "name": "Proszę wpisać swoje imię i nazwisko.",
+    "phone": "Proszę wpisać swój numer WhatsApp.",
+    "simCapacity": "Proszę wybrać pakiet danych karty SIM.",
+    "simCards": "Proszę podać liczbę kart SIM."
+  },
+  "writeen": {
+    "Selected": "Wybrano",
+    "trip": "Wybierz wycieczkę",
+    "summary": "Podsumowanie pakietu",
+    "select": "Wybierz",
+    "selected": "Wybrano",
+    "ss": "Twoja wybrana wycieczka",
+    "remove": "Usuń",
+    "sub": "Suma częściowa",
+    "total": "Suma",
+    "bb": "Kontynuuj rezerwację",
+    "booking_info": "Informacje o rezerwacji",
+    "name_label": "Imię i nazwisko",
+    "name_placeholder": "Wpisz swoje imię i nazwisko",
+    "phone_label": "Numer WhatsApp",
+    "phone_placeholder": "Wpisz swój numer",
+    "date_label": "Data",
+    "guests_label": "Gość",
+    "hotel_label": "Hotel",
+    "hotel_placeholder": "Nazwa hotelu",
+    "room_label": "Numer pokoju",
+    "special_request_label": "Prośba specjalna",
+    "special_request_placeholder": "Dodatkowe uwagi...",
+    "submit": "Poproś o rezerwację",
+    "processing": "Przetwarzanie..."
+  },
+  "taxi": {
+    "vv": "Zarezerwuj transfer",
+    "book": "Jak zarezerwować transfer",
+    "whyChoose": {
+      "car": "Prywatne i komfortowe pojazdy",
+      "plane": "Usługi odbioru i dowozu na lotnisko",
+      "driver": "Profesjonalni i doświadczeni kierowcy",
+      "hotel": "Transfery hotelowe",
+      "safe": "Bezpieczny i niezawodny transport",
+      "ac": "W pełni klimatyzowane samochody",
+      "available": "Dostępne 24/7 dla Twojej wygody"
+    },
+    "howToBook": {
+      "step1": "Wybierz miejsce odbioru",
+      "step2": "Wprowadź szczegóły rezerwacji",
+      "step3": "Wyślij zapytanie o rezerwację",
+      "step4": "Otrzymaj potwierdzenie"
+    },
+    "dd": "Dlaczego warto wybrać nasze taksówki",
+    "aaa": "Wszystkie nasze pojazdy są nowoczesne, czyste i w pełni klimatyzowane, co zapewnia przyjemną jazdę nawet podczas długich tras. Nasi doświadczeni kierowcy świetnie znają okolicę, co pozwala im wybierać najlepsze trasy i dbać o to, abyś dotarł do celu szybko i bezpiecznie.",
+    "A": "Nasze usługi taksówkowe są idealne dla podróżnych, którzy pragną prywatnego i wygodnego transferu bez konieczności czekania na transport publiczny. Od odbiorów z lotniska po transfery hotelowe i wycieczki do popularnych miejsc – dbamy o to, aby każdy przejazd był komfortowy, bezpieczny i przyjemny.",
+    "transfer": "Transfer taksówką",
+    "title": "Ciesz się bezpiecznymi i wygodnymi transferami taksówkowymi z profesjonalnymi kierowcami dostępnymi 24/7. Sprawiamy, że Twoja podróż jest płynna i bezstresowa.",
+    "ss": "Niezawodne transfery taksówkowe",
+    "aa": "Zapewniamy niezawodne i komfortowe usługi transferu taksówką, zaprojektowane tak, aby Twoja podróż była płynna i bezstresowa. Niezależnie od tego, czy przylatujesz na lotnisko, opuszczasz hotel, czy planujesz wycieczkę w inne miejsce, nasi profesjonalni kierowcy są gotowi zabrać Cię bezpiecznie i na czas."
+  },
+  "bookingform": {
+    "datapackage": "Pakiet danych",
+    "vv": "Lokalna karta SIM",
+    "Aa": "Bądź w kontakcie dzięki szybkiemu internetowi",
+    "whatsnumb": "Wpisz swój numer WhatsApp",
+    "ss": "Szczegóły wycieczki",
+    "choseplan": "Wybierz plan",
+    "seelee": "Wybierz cel podróży",
+    "Select_departure": "Wybierz miejsce wyjazdu",
+    "typecar": "Typ pojazdu",
+    "aa": "Wybierz pojazd",
+    "room": "Numer pokoju",
+    "flight": "Numer lotu",
+    "name": "Imię i nazwisko",
+    "namepalce": "Wpisz swoje imię i nazwisko",
+    "number": "Numer WhatsApp",
+    "a": "Wpisz swój numer pokoju | numer lotu"
+  },
+  "to": "Do",
+  "sim_services": {
+    "hero": {
+      "title": "Karty SIM",
+      "description": "Zamów lokalną kartę SIM z dostawą, aby cieszyć się szybkim internetem podczas podróży."
+    }
+  },
+  "sim_page": {
+    "breadcrumb": {
+      "taxi_transfer": "transfer taksówką",
+      "build_package": "Stwórz swój pakiet",
+      "trip_details": "szczegóły wycieczki",
+      "booking_confirmation": "Prośba o potwierdzenie rezerwacji",
+      "home": "Strona główna",
+      "services": "Usługi",
+      "sim_card": "karta sim"
+    },
+    "success_message": {
+      "book_another": "Zarezerwuj kolejną kartę SIM",
+      "title": "Zapytanie o rezerwację wysłane pomyślnie",
+      "description": "Dziękujemy! Nasz zespół skontaktuje się z Tobą wkrótce, aby potwierdzić szczegóły wycieczki i godzinę odbioru."
+    },
+    "title": "Bądź w kontakcie podczas podróży",
+    "description": "Pozostań w kontakcie przez całą podróż po Egipcie dzięki niezawodnej lokalnej karcie SIM. Ciesz się szybkim internetem, aby korzystać z map, kontaktować się ze znajomymi i rodziną oraz dzielić się chwilami z podróży online. Twoja karta SIM może zostać dostarczona bezpośrednio na lotnisko lub do hotelu, zapewniając płynny i łatwy start podróży.",
+    "sections": {
+      "why_choose_title": "DLACZEGO WARTO WYBRAĆ NASZE KARTY SIM",
+      "how_it_works_title": "Jak to działa"
+    },
+    "booking_card": {
+      "summary_title": "Podsumowanie pakietu SIM",
+      "header": "Zarezerwuj kartę SIM",
+      "customize_title": "Dostosuj swój pakiet",
+      "delivery_title": "Informacje o dostawie",
+      "labels": {
+        "sim_package": "Pakiet SIM",
+        "sim_package_placeholder": "Wybierz plan",
+        "cards_count": "Liczba kart SIM",
+        "delivery_location": "Miejsce dostawy",
+        "date": "Data",
+        "room_flight": "Numer pokoju | Numer lotu",
+        "full_name": "Imię i nazwisko",
+        "whatsapp_number": "Numer WhatsApp",
+        "special_request": "Prośba specjalna"
+      },
+      "placeholders": {
+        "room_number": "Wpisz swój numer pokoju",
+        "full_name": "Wpisz swoje imię i nazwisko",
+        "whatsapp": "Wpisz swój numer WhatsApp"
+      },
+      "button": {
+        "default": "Poproś o rezerwację",
+        "loading": "Przetwarzanie..."
+      },
+      "errors": {
+        "sim_package_required": "Pakiet SIM jest wymagany",
+        "cards_count_min": "Liczba kart musi wynosić co najmniej 1",
+        "delivery_location_required": "Miejsce dostawy jest wymagane",
+        "date_required": "Data jest wymagana",
+        "room_number_required": "Numer pokoju / numer lotu jest wymagany",
+        "full_name_required": "Imię i nazwisko są wymagane",
+        "phone_required": "Telefon jest wymagany"
+      },
+      "footer_disclaimer": "To jest zapytanie o rezerwację. Nasz zespół skontaktuje się z Tobą, aby potwierdzić dostępność."
+    }
+  },
+  "whyChoose": {
+    "instant_activation": "Natychmiastowa aktywacja",
+    "easy_communication": "Łatwa komunikacja",
+    "fast_connection": "Szybkie połączenie i niezawodny zasięg 4G/5G",
+    "reliable_service": "Niezawodna lokalna obsługa"
+  },
+  "howToBook": {
+    "step_1_online_request": "Zamów kartę SIM online",
+    "step_2_delivery_location": "Wybierz miejsce dostawy",
+    "step_3_receive_sim": "Odbierz na lotnisku lub w hotelu",
+    "step_4_start_using": "Zacznij korzystać z internetu natychmiast"
+  }
+}

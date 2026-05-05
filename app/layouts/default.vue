@@ -48,20 +48,25 @@
                 {{ $t('nav.simServices') }}
             </NuxtLink>
         </div>
-
         <!-- Desktop Right -->
         <div class="hidden md:flex items-center gap-4">
-            <div class="relative flex items-center">
-                <Globe class="w-4 h-4 absolute left-3 pointer-events-none" />
+            <div class="relative">
+                <button @click="showLocale = !showLocale" type="button"
+                    class="flex items-center gap-2 border border-foreground rounded-full pl-3 pr-8 py-2 text-sm bg-transparent text-foreground cursor-pointer">
+                    <component :is="currentLocale.flag" class="h-5 w-5" />
+                    <span>{{ currentLocale.code.toUpperCase() }}</span>
+                    <ChevronDown class="w-3 h-3 absolute right-3 pointer-events-none" />
+                </button>
 
-                <select :value="locale" @change="changeLocale"
-                    class="appearance-none border border-foreground rounded-full pl-9 pr-8 py-2 text-sm bg-transparent text-foreground cursor-pointer">
-                    <option v-for="item in locales" :key="item.code" :value="item.code">
-                        {{ item.code.toUpperCase() }}
-                    </option>
-                </select>
-
-                <ChevronDown class="w-3 h-3 absolute right-3 pointer-events-none" />
+                <div v-if="showLocale"
+                    class="absolute right-0 mt-2 min-w-[150px] rounded-xl border border-border bg-white shadow-lg overflow-hidden z-50">
+                    <button v-for="item in locales" :key="item.code"
+                        @click="changeLocale(item.code); showLocale = false"
+                        class="w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-muted">
+                        <component :is="item.flag" class="h-5 w-5" />
+                        <span>{{ item.code.toUpperCase() }}</span>
+                    </button>
+                </div>
             </div>
 
             <button
@@ -221,14 +226,28 @@ import { ref } from 'vue';
 import { Globe, ChevronDown } from "lucide-vue-next";
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
-const { locale, locales, setLocale } = useI18n();
-
-const changeLocale = async (event) => {
-    await setLocale(event.target.value);
+const { locale, setLocale } = useI18n();
+import Us from "@/assets/svgs/us.svg"
+import Italy from "@/assets/svgs/italy.svg"
+import Germany from "@/assets/svgs/germany.svg"
+import Poland from "@/assets/svgs/poland.svg"
+const changeLocale = async (code) => {
+    await setLocale(code);
 };
 const open = ref(false);
 
+const showLocale = ref(false);
 
+const locales = [
+    { code: "en", flag: Us },
+    { code: "de", flag: Germany },
+    { code: "pl", flag: Poland },
+    { code: "it", flag: Italy }
+];
+
+const currentLocale = computed(() => {
+    return locales.find(item => item.code === locale.value) || locales[0];
+});
 
 
 const quickLinks = computed(() => [
