@@ -30,7 +30,7 @@
 
                 <div class="flex items-center gap-1 text-[#999999] text-sm mb-4">
                     <Calendar class="w-3.5 h-3.5" />
-                    {{ trip?.days?.length + "days" }}
+                    {{ trip?.days?.length +" "+ $t('days') }}
                 </div>
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">

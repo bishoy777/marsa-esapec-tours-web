@@ -63,7 +63,7 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 const services = computed(() => {
-    [
+    return [
         {
             title: t('services_section.taxi_title'),
             description: t('services_section.taxi_desc'),
