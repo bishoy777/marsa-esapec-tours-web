@@ -86,6 +86,24 @@
       "title": "Build Your Package",
       "description": "Choose how many days you want, explore available trips, and create your perfect package in minutes.",
       "button": "Let's Build Your Package"
+    },
+    "hero_title": "Our Packages",
+    "search_label": "Find your adventure",
+    "search_placeholder": "Search by trip name...",
+    "search_button": "Search",
+    "no_results_title": "No trips found",
+    "no_results_subtitle": "Try adjusting your search or filters",
+    "load_more": "Load more"
+  },"build_package": {
+    "title": "Build Your Package",
+    "description": "Choose how many days you want, explore available trips, and create your perfect package in minutes.",
+    "cta_button": "Let's Build Your Package",
+    "instant_booking": "Instant",
+    "booking_sub": "Booking",
+    "steps": {
+      "days": "Select Number of Days",
+      "trips": "Explore Available Trips",
+      "create": "Create Your Package"
     }
   },
   "faqs": {
@@ -187,13 +205,14 @@
   "breadcrumbs": {
     "home": "Home",
     "all_trips": "All Trips"
-  },"validation": {
+  },
+  "validation": {
     "date_required": "Date is required",
     "guests_required": "At least 1 guest is required",
     "hotel_required": "Hotel name is required",
     "room_required": "Room number is required",
     "name_required": "Full name is required",
     "phone_required": "WhatsApp number is required",
-    "toast":"Please fill required faild correctly"
+    "toast": "Please fill required faild correctly"
   }
 }
