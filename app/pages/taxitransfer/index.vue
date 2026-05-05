@@ -7,11 +7,10 @@
                 <div class="absolute inset-0 bg-secondary/90"></div>
                 <div class="relative z-10 text-center px-4 max-w-3xl animate-in slide-in-from-bottom-8 duration-700">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                        Taxi Transfers
+                        {{ $t('taxi.transfer') }}
                     </h1>
                     <p class="text-lg md:text-xl ">
-                        Enjoy safe and convenient taxi transfers with professional drivers available 24/7. we make your
-                        journey smooth and stress-free.
+                        {{ $t('taxi.title') }}
                     </p>
                 </div>
             </section>
@@ -22,32 +21,23 @@
                     <!-- LEFT -->
                     <div class="flex-1 min-w-0">
                         <h1 class="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-                            Reliable Taxi Transfers
+                            {{ $t('taxi.ss') }}
                         </h1>
 
                         <div class="space-y-4 text-[#666666] text-sm md:text-base leading-relaxed mb-8">
                             <p>
-                                We provide reliable and comfortable taxi transfer services designed to make your travel
-                                experience smooth and stress-free. Whether you are arriving at the airport, leaving your
-                                hotel, or planning a trip to another destination, our professional drivers are ready to
-                                take you safely and on time.
+                                {{ $t('taxi.aa') }}
                             </p>
                             <p>
-                                Our taxi service is perfect for travelers who want a private and convenient transfer
-                                without the hassle of waiting for public transportation. From airport pickups to hotel
-                                transfers and trips to popular destinations, we ensure every ride is comfortable, safe,
-                                and enjoyable.
+                                {{ $t('taxi.A') }}
                             </p>
                             <p>
-                                All our vehicles are modern, clean, and fully air-conditioned, ensuring a pleasant ride
-                                even during long journeys. Our experienced drivers know the local area very well,
-                                allowing them to choose the best routes and make sure you reach your destination quickly
-                                and safely.
+                                {{ $t('taxi.aaa') }}
                             </p>
                         </div>
                         <!-- Why Choose -->
                         <h2 class="text-xl md:text-2xl font-bold text-primary-foreground mb-4">
-                            Why Choose Our Taxi Service
+                            {{ $t('taxi.dd') }}
                         </h2>
                         <ul class="space-y-3 mb-8">
                             <li v-for="(item, i) in whyChoose" :key="i" class="flex items-center gap-3">
@@ -63,7 +53,7 @@
                         </ul>
                         <!-- How to Book -->
                         <h2 class="text-xl md:text-2xl font-bold text-secondary mb-4">
-                            How To Book Transfer
+                            {{ $t('taxi.book') }}
                         </h2>
                         <ul class="space-y-3 mb-10">
                             <li v-for="(item, i) in howToBook" :key="i" class="flex items-center gap-3">
@@ -114,7 +104,7 @@
 
                         <div class="bg-background rounded-2xl shadow-lg p-6 sticky top-8 text-primary-foreground">
                             <h3 class="text-xl font-bold text-primary-foreground mb-1">
-                                Book Transfer
+                                {{ $t('taxi.vv') }}
                             </h3>
                             <p class="mb-5">
                                 <span class="text-primary-danger font-bold text-xl">
@@ -123,14 +113,14 @@
                                 </span>
                                 <span class="text-[#666666] text-sm"> </span>
                             </p>
-                            <h4 class="text-primary-foreground font-bold mb-3">Trip Details</h4>
+                            <h4 class="text-primary-foreground font-bold mb-3"> {{ $t('bookingform.ss') }}</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                                 <!-- FROM CUSTOM SELECT -->
                                 <div class="relative group">
                                     <label
                                         class="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1 mb-2 block">
-                                        From
+                                        {{ $t('from') }}
                                     </label>
 
                                     <!-- Toggle Button -->
@@ -141,7 +131,7 @@
                                             <MapPin class="w-5 h-5 text-primary-danger" />
                                             <span class="font-semibold text-sm"
                                                 :class="!form.from ? 'text-gray-400' : 'text-foreground'">
-                                                {{ form.from || 'Select departure' }}
+                                                {{ form.from || $t('Select_departure') }}
                                             </span>
                                         </div>
                                         <ChevronDown class="w-4 h-4 transition-transform duration-300"
@@ -173,7 +163,7 @@
                                 <div class="relative group" :class="{ 'opacity-50 pointer-events-none': !form.from }">
                                     <label
                                         class="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1 mb-2 block">
-                                        To
+                                        {{ $t('to') }}
                                     </label>
 
                                     <button @click="showTo = !showTo" type="button" :disabled="!form.from"
@@ -183,7 +173,7 @@
                                             <Navigation class="w-5 h-5 text-blue-500" />
                                             <span class="font-semibold text-sm"
                                                 :class="!form.to ? 'text-gray-400' : 'text-foreground'">
-                                                {{ form.to || 'Select destination' }}
+                                                {{ form.to || $t('bookingform.seelee') }}
                                             </span>
                                         </div>
                                         <ChevronDown class="w-4 h-4 transition-transform duration-300"
@@ -198,7 +188,7 @@
                                                     @click="form.to = to; showTo = false"
                                                     class="flex items-center justify-between px-4 py-3 hover:bg-blue-50 cursor-pointer transition-colors group">
                                                     <span class="text-sm font-medium group-hover:text-blue-600">{{ to
-                                                    }}</span>
+                                                        }}</span>
                                                     <Check v-if="form.to === to" class="w-4 h-4 text-blue-500" />
                                                 </div>
                                             </div>
@@ -210,7 +200,7 @@
                                 </div>
                             </div>
                             <!-- Date -->
-                            <label class="text-sm font-semibold mb-1 block">Date</label>
+                            <label class="text-sm font-semibold mb-1 block">{{ $t('date') }}</label>
                             <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                                 <Calendar class="w-5 h-5" />
                                 <input type="date" v-model="form.date"
@@ -223,7 +213,7 @@
                             </p>
 
                             <!-- Guests -->
-                            <label class="text-sm font-semibold mb-1 block">Guest</label>
+                            <label class="text-sm font-semibold mb-1 block">{{ $t('guest') }}</label>
                             <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                                 <Users class="w-5 h-5" />
                                 <input type="number" min="1" v-model="form.peopleCount"
@@ -235,7 +225,7 @@
                             <div class="relative group">
                                 <label
                                     class="text-xs font-bold text-primary-foreground uppercase tracking-widest ml-1 mb-2 block">
-                                    Vehicle Type
+                                    {{ $t('bookingform.typecar') }}
                                 </label>
 
                                 <!-- Dropdown Trigger -->
@@ -247,7 +237,7 @@
                                         <div class="flex flex-col items-start">
                                             <span class="font-semibold text-sm"
                                                 :class="!form.carType ? 'text-gray-400' : 'text-foreground'">
-                                                {{ form.carType || 'Select a vehicle' }}
+                                                {{ form.carType || $t('bookingform.aa') }}
                                             </span>
                                         </div>
                                     </div>
@@ -261,7 +251,7 @@
                                         <div class="max-h-64 overflow-y-auto">
                                             <!-- Vehicle Options -->
                                             <div v-for="option in vehicleOptions" :key="option.id"
-                                                @click="form.carType = option.label; showVehicle = false"
+                                                @click="form.carType = option.value; showVehicle = false"
                                                 class="flex items-center justify-between px-4 py-4 hover:bg-primary-danger/5 cursor-pointer transition-colors group border-b border-gray-50 last:border-0">
 
                                                 <div class="flex flex-col">
@@ -292,12 +282,12 @@
                                 </p>
                             </div>
                             <!-- Room -->
-                            <label class="text-sm font-semibold mb-1 block">{{ selectedTrip?.isHotel ? 'Room Number' :
-                                'Flight Number' }}</label>
+                            <label class="text-sm font-semibold mb-1 block">{{ selectedTrip?.isHotel ?
+                                $t('bookingform.room') :
+                                $t('bookingform.flight') }}</label>
                             <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                                 <Hotel class="w-5 h-5" />
-                                <input v-model="form.flightroomNumber" type="number"
-                                    placeholder="Enter Your Room Number"
+                                <input v-model="form.flightroomNumber" type="number" :placeholder="t('bookingform.a')"
                                     class="bg-transparent outline-none text-sm flex-1" />
                             </div>
                             <p v-if="errors.flightroomNumber" class="text-red-500 text-xs mt-1">
@@ -305,10 +295,10 @@
                             </p>
 
                             <!-- Name -->
-                            <label class="text-sm font-semibold mb-1 block">Full Name</label>
+                            <label class="text-sm font-semibold mb-1 block">{{ $t('bookingform.name') }}</label>
                             <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                                 <User class="w-5 h-5" />
-                                <input v-model="form.name" type="text" placeholder="Enter your full name"
+                                <input v-model="form.name" type="text" :placeholder="t('bookingform.namepalce')"
                                     class="bg-transparent outline-none text-sm flex-1" />
                             </div>
                             <p v-if="errors.name" class="text-red-500 text-xs mt-1">
@@ -316,10 +306,10 @@
                             </p>
 
                             <!-- WhatsApp -->
-                            <label class="text-sm font-semibold mb-1 block">WhatsApp Number</label>
+                            <label class="text-sm font-semibold mb-1 block">{{ $t('bookingform.number') }}</label>
                             <div class="flex items-center gap-2 border rounded-lg px-4 py-3 mb-4">
                                 <MessageCircle class="w-5 h-5" />
-                                <input v-model="form.phone" type="text" placeholder="Enter Your WhatsApp Number"
+                                <input v-model="form.phone" type="text" :placeholder="t('bookingform.whatsnumb')"
                                     class="bg-transparent outline-none text-sm flex-1" />
 
                             </div>
@@ -342,9 +332,9 @@
                                                 <Smartphone class="w-5 h-5" />
                                             </div>
                                             <div>
-                                                <h4 class="text-sm font-bold text-foreground">Local SIM Card</h4>
-                                                <p class="text-xs text-muted-foreground">Stay connected with high-speed
-                                                    data</p>
+                                                <h4 class="text-sm font-bold text-foreground">{{ $t('bookingform.vv') }}
+                                                </h4>
+                                                <p class="text-xs text-muted-foreground">{{ $t('bookingform.Aa') }}</p>
                                             </div>
                                         </div>
 
@@ -369,12 +359,13 @@
                                                 <div class="space-y-1.5">
                                                     <label
                                                         class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">
-                                                        Data Package
+                                                        {{ $t('bookingform.datapackage') }}
                                                     </label>
                                                     <div class="relative">
                                                         <select v-model="form.simCapacity"
                                                             class="w-full bg-white border border-border rounded-lg pl-4 pr-10 py-2.5 appearance-none focus:border-primary-danger focus:ring-2 focus:ring-primary-danger/10 outline-none text-sm font-medium transition-all">
-                                                            <option value="" disabled>Choose a plan</option>
+                                                            <option value="" disabled>{{ $t('bookingform.choseplan') }}
+                                                            </option>
                                                             <option :value="item?.capacity" v-for="item in simPackges">
                                                                 {{
                                                                     item?.capacity }}</option>
@@ -392,7 +383,7 @@
                                                 <div class="space-y-1.5">
                                                     <label
                                                         class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">
-                                                        Quantity
+                                                        {{ $t('Quantity') }}
                                                     </label>
                                                     <div
                                                         class="flex items-center h-[42px] border border-border rounded-lg bg-white overflow-hidden focus-within:border-primary-danger transition-colors">
@@ -420,7 +411,8 @@
                                 </div>
                             </div>
                             <!-- Special Request -->
-                            <label class="text-sm font-semibold mb-1 mt-2 block">Special Request</label>
+                            <label class="text-sm font-semibold mb-1 mt-2 block">{{
+                                $t('build_package.form.special_label') }}</label>
                             <textarea v-model="form.specialRequest"
                                 class="w-full border rounded-lg px-4 py-3 mb-6 text-sm h-28 resize-none bg-transparent" />
                             <!-- Button -->
@@ -435,11 +427,11 @@
                                 </svg>
 
                                 <span>
-                                    {{ loading ? 'Processing...' : 'Request Booking' }}
+                                    {{ loading ? t('build_package.form.processing') : t('build_package.form.submit') }}
                                 </span>
                             </button>
                             <p class="text-[#666666] text-xs text-center mt-3">
-                                This is a booking request. our team will contact you to confirm availability.
+                                {{ $t('build_package.form.a') }}
                             </p>
                         </div>
                     </div>
@@ -451,11 +443,11 @@
                 <div class="max-w-7xl mx-auto">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 md:mb-10">
                         <h2 class="text-xl md:text-3xl font-bold text-primary-foreground">
-                            Reviews
+                            {{ $t('footer.support.reviews') }}
                         </h2>
                         <button @click="router.push('/reviews/1')"
                             class="bg-primary-danger text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all shadow-sm border border-white/10">
-                            Write a review
+                            {{ $t('footer.write_review') }}
                         </button>
                     </div>
                     <div class="divide-y divide-border">
@@ -512,7 +504,7 @@
         <section class="py-16 md:py-12 px-4">
             <div class="max-w-7xl mx-auto px-4 md:px-6">
                 <h2 class="text-2xl md:text-4xl font-bold text-primary-foreground  mb-12">
-                    Frequently Asked Question
+                    {{ $t('faqs.title') }}
                 </h2>
                 <div class="space-y-4">
                     <div v-for="(faq, i) in faqs" :key="i"
@@ -532,10 +524,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-
     </div>
 </template>
 <script setup lang="ts">
@@ -573,26 +563,29 @@ const toggle = (index: number) => {
 };
 const showVehicle = ref(false);
 
-const vehicleOptions = [
+const vehicleOptions = computed(() => [
     {
         id: 1,
-        label: 'Small Private Car',
-        description: 'Comfortable for individuals or couples',
-        seats: '4 Seats'
+        value: "Small Private Car",
+        label: t('vehicle.smallPrivateCar'),
+        description: t('vehicle.smallPrivateCarDesc'),
+        seats: t('vehicle.seats4')
     },
     {
         id: 2,
-        label: 'Large Private Car',
-        description: 'Spacious SUV for small families',
-        seats: '6 Seats'
+        value: "Large Private Car",
+        label: t('vehicle.largePrivateCar'),
+        description: t('vehicle.largePrivateCarDesc'),
+        seats: t('vehicle.seats6')
     },
     {
         id: 3,
-        label: 'Microbus',
-        description: 'Perfect for group travel and tours',
-        seats: '12-14 Seats'
+        value: "Microbus",
+        label: t('vehicle.microbus'),
+        description: t('vehicle.microbusDesc'),
+        seats: t('vehicle.seats1214')
     }
-];
+]);
 
 /* reset TO when FROM changes */
 const onFromChange = () => {
@@ -700,29 +693,30 @@ const totalPrice = computed(() => {
 });
 const submitBooking = async () => {
     // Reset errors
-    errors.date = form.date ? '' : 'Please select a date.';
-    errors.to = form.to ? '' : 'Please select a destination.';
-    errors.from = form.from ? '' : 'Please select a departure location.';
-    errors.carType = form.carType ? '' : 'Please select a vehicle type.';
-    errors.peopleCount = form.peopleCount > 0 ? '' : 'Please enter the number of guests.';
-    errors.flightroomNumber = form.flightroomNumber ? '' : 'Please the correct room/flight number.';
-    errors.name = form.name ? '' : 'Please enter your full name.';
-    errors.phone = form.phone ? '' : 'Please enter your WhatsApp number.';
-    form.totalPrice = String(totalPrice.value);
-    if (form.addSimCard) {
-        errors.simCapacity = form.simCapacity ? '' : 'Please select a SIM card data package.';
-        errors.simCards = form.simCards > 0 ? '' : 'Please enter the quantity of SIM cards.';
+    errors.date = form.date ? '' : t('validation.date');
+    errors.to = form.to ? '' : t('validation.to');
+    errors.from = form.from ? '' : t('validation.from');
+    errors.carType = form.carType ? '' : t('validation.carType');
+    errors.peopleCount = form.peopleCount > 0 ? '' : t('validation.peopleCount');
+    errors.flightroomNumber = form.flightroomNumber ? '' : t('validation.flightroomNumber');
+    errors.name = form.name ? '' : t('validation.name');
+    errors.phone = form.phone ? '' : t('validation.phone');
 
+    form.totalPrice = String(totalPrice.value);
+
+    if (form.addSimCard) {
+        errors.simCapacity = form.simCapacity ? '' : t('errors.simCapacity');
+        errors.simCards = form.simCards > 0 ? '' : t('errors.simCards');
     } else {
-        delete form.simCapacity
-        delete form.simCards
+        delete form.simCapacity;
+        delete form.simCards;
 
         errors.simCapacity = '';
         errors.simCards = '';
     }
 
     if (Object.values(errors).some(error => error)) {
-        addToast('Please fix the errors in the form before submitting.', 'error');
+        addToast(t('validation.toast'), 'error');
         return; // If there are errors, do not proceed
     }
     form.taxiId = selectedTrip.value?.id
@@ -761,20 +755,21 @@ const submitBooking = async () => {
     console.log('Booking Details: after', { ...form });
 };
 /* ---------- Static Data ---------- */
-const whyChoose = [
-    { icon: CarFront, text: "Private and comfortable vehicles" },
-    { icon: Plane, text: "Airport pickup and drop-off services" },
-    { icon: IdCard, text: "Professional and experienced drivers" },
-    { icon: Hotel, text: "Hotel transfers" },
-    { icon: ShieldCheck, text: "safe and reliable transportation" },
-    { icon: CloudSnow, text: "Fully air-conditioned cars" },
-    { icon: Clock3, text: "Available 24/7 for your convenience" },
-];
-
-const howToBook = [
-    "Choose pickup location",
-    "Enter Booking Details",
-    "Send Booking Request",
-    "Receive Confirmation",
-]
+import { useI18n } from "vue-i18n";
+const { t } = useI18n()
+const whyChoose = computed(() => [
+    { icon: CarFront, text: t("taxi.whyChoose.car") },
+    { icon: Plane, text: t("taxi.whyChoose.plane") },
+    { icon: IdCard, text: t("taxi.whyChoose.driver") },
+    { icon: Hotel, text: t("taxi.whyChoose.hotel") },
+    { icon: ShieldCheck, text: t("taxi.whyChoose.safe") },
+    { icon: CloudSnow, text: t("taxi.whyChoose.ac") },
+    { icon: Clock3, text: t("taxi.whyChoose.available") }
+]);
+const howToBook = computed(() => [
+    t("taxi.howToBook.step1"),
+    t("taxi.howToBook.step2"),
+    t("taxi.howToBook.step3"),
+    t("taxi.howToBook.step4")
+]);
 </script>

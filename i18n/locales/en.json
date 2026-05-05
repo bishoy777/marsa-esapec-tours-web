@@ -1,6 +1,14 @@
 {
   "viewdetails": "View Details",
+  "Quantity": "Quantity",
   "person": "Person",
+  "from": "From",
+  "days": "days",
+  "date": "Date",
+  "guest": "Guest",
+  "hotel_name": "Hotel Name",
+  "room_number": "Room Number",
+  "phone": "Phone",
   "nav": {
     "home": "Home",
     "trips": "Trips",
@@ -30,7 +38,8 @@
     "support": {
       "faq": "FAQ",
       "reviews": "Reviews"
-    }
+    },
+    "write_review": "Write a review"
   },
   "gallery": {
     "morePhotos": "+{count} Photos"
@@ -118,6 +127,55 @@
       "days": "Select Number of Days",
       "trips": "Explore Available Trips",
       "create": "Create Your Package"
+    },
+    "nav": {
+      "home": "Home",
+      "current": "build your package"
+    },
+    "stepss": {
+      "step1": "Choose Trip",
+      "step2": "Booking Info",
+      "step3": "Success"
+    },
+    "step1": {
+      "title": "Choose your trip",
+      "selected": "Selected",
+      "select": "Select",
+      "from": "From",
+      "per_person": "/Person"
+    },
+    "summary": {
+      "title": "Package Summary",
+      "subtitle": "Your Selected Trip",
+      "remove": "Remove",
+      "subtotal": "Sub Total",
+      "total": "Total",
+      "continue": "Continue Booking"
+    },
+    "form": {
+      "a":"This is a booking request. our team will contact you to confirm availability.",
+      "title": "Booking Information",
+      "name_label": "Full Name",
+      "name_placeholder": "Enter your full name",
+      "phone_label": "WhatsApp Number",
+      "phone_placeholder": "Enter your number",
+      "date_label": "Date",
+      "guests_label": "Guest",
+      "hotel_label": "Hotel",
+      "hotel_placeholder": "Hotel name",
+      "room_label": "Room Number",
+      "special_label": "Special Request",
+      "special_placeholder": "Any special notes...",
+      "submit": "Request Booking",
+      "processing": "Processing..."
+    },
+    "success": {
+      "title": "Booking Request Sent Successfully",
+      "description": "Thank You! our team will contact you shortly to confirm your trip details and pickup time.",
+      "summary_title": "package summary",
+      "info_title": "Booking Information",
+      "total_price": "Total Price",
+      "new_package": "Build new package"
     }
   },
   "faqs": {
@@ -217,8 +275,17 @@
     "RelatedTours": "Related tours"
   },
   "breadcrumbs": {
+    "all_trips": "All Trips",
     "home": "Home",
-    "all_trips": "All Trips"
+    "build_package": "Build Your Package"
+  },
+  "success": {
+    "title": "Booking Request Sent Successfully",
+    "description": "Thank You! our team will contact you shortly to confirm your trip details and pickup time.",
+    "package_summary": "Package Summary",
+    "booking_info": "Booking Information",
+    "total_price": "Total Price",
+    "build_new": "Build new package"
   },
   "validation": {
     "date_required": "Date is required",
@@ -227,6 +294,88 @@
     "room_required": "Room number is required",
     "name_required": "Full name is required",
     "phone_required": "WhatsApp number is required",
-    "toast": "Please fill required faild correctly"
-  }
+    "toast": "Please fill required faild correctly",
+    "date": "Please select a date.",
+    "to": "Please select a destination.",
+    "from": "Please select a departure location.",
+    "carType": "Please select a vehicle type.",
+    "peopleCount": "Please enter the number of guests.",
+    "flightroomNumber": "Please enter the correct room/flight number.",
+    "name": "Please enter your full name.",
+    "phone": "Please enter your WhatsApp number.",
+    "simCapacity": "Please select a SIM card data package.",
+    "simCards": "Please enter the quantity of SIM cards."
+  },
+  "writeen": {
+    "Selected": "Selected",
+    "trip": "Choose your trip",
+    "summary": "Package Summary",
+    "select": "Select",
+    "selected": "Selected",
+    "ss": "Your Selected Trip",
+    "remove": "Remove",
+    "sub": "Sub Total",
+    "total": "Total",
+    "bb": " Continue Booking",
+    "booking_info": "Booking Information",
+    "name_label": "Full Name",
+    "name_placeholder": "Enter your full name",
+    "phone_label": "WhatsApp Number",
+    "phone_placeholder": "Enter your number",
+    "date_label": "Date",
+    "guests_label": "Guest",
+    "hotel_label": "Hotel",
+    "hotel_placeholder": "Hotel name",
+    "room_label": "Room Number",
+    "special_request_label": "Special Request",
+    "special_request_placeholder": "Any special notes...",
+    "submit": "Request Booking",
+    "processing": "Processing..."
+  },
+  "taxi": {
+    "vv": "Book Transfer",
+    "book": "How to book tansfer",
+    "whyChoose": {
+      "car": "Private and comfortable vehicles",
+      "plane": "Airport pickup and drop-off services",
+      "driver": "Professional and experienced drivers",
+      "hotel": "Hotel transfers",
+      "safe": "Safe and reliable transportation",
+      "ac": "Fully air-conditioned cars",
+      "available": "Available 24/7 for your convenience"
+    },
+
+    "howToBook": {
+      "step1": "Choose pickup location",
+      "step2": "Enter booking details",
+      "step3": "Send booking request",
+      "step4": "Receive confirmation"
+    },
+    "dd": " Why Choose Our Taxi Service",
+    "aaa": "All our vehicles are modern, clean, and fully air-conditioned, ensuring a pleasant ride even during long journeys. Our experienced drivers know the local area very well, allowing them to choose the best routes and make sure you reach your destination quicklyand safely.",
+    "A": "Our taxi service is perfect for travelers who want a private and convenient transfer without the hassle of waiting for public transportation. From airport pickups to hotel transfers and trips to popular destinations, we ensure every ride is comfortable, safe, and enjoyable.",
+    "transfer": "Taxi Transfer",
+    "title": "Enjoy safe and convenient taxi transfers with professional drivers available 24/7. we make your journey smooth and stress-free.",
+    "ss": "  Reliable Taxi Transfers",
+    "aa": "We provide reliable and comfortable taxi transfer services designed to make your travel experience smooth and stress-free. Whether you are arriving at the airport, leaving yourhotel, or planning a trip to another destination, our professional drivers are ready totake you safely and on time."
+  },
+  "bookingform": {
+    "datapackage": "Data Package",
+    "vv": "Local SIM Card",
+    "Aa": "Stay connected with high-speed data",
+    "whatsnumb": "Enter Your WhatsApp Number",
+    "ss": "Trip Details",
+    "choseplan": "Choose a plan",
+    "seelee": "Select destination",
+    "Select_departure": "Select departure",
+    "typecar": "Vehicle Type",
+    "aa": "Select a vehicle",
+    "room": "Room Number",
+    "flight": "Flight Number",
+    "name": "Full Name",
+    "namepalce": "Enter Your Full Name",
+    "number": "WhatsApp Number",
+    "a": "Enter Your Room | Flight Number"
+  },
+  "to": "To"
 }
