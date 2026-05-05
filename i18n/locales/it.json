@@ -491,6 +491,7 @@
         "loading": "Elaborazione..."
       },
       "errors": {
+        "simCapacity": "Il è obbligatorio",
         "sim_package_required": "Il pacchetto SIM è obbligatorio",
         "cards_count_min": "Il numero di schede deve essere almeno 1",
         "delivery_location_required": "Il luogo di consegna è obbligatorio",

@@ -705,8 +705,8 @@ const submitBooking = async () => {
     form.totalPrice = String(totalPrice.value);
 
     if (form.addSimCard) {
-        errors.simCapacity = form.simCapacity ? '' : t('errors.simCapacity');
-        errors.simCards = form.simCards > 0 ? '' : t('errors.simCards');
+        errors.simCapacity = form.simCapacity ? '' : t('validation.simCapacity');
+        errors.simCards = form.simCards > 0 ? '' : t('validation.simCards');
     } else {
         delete form.simCapacity;
         delete form.simCards;

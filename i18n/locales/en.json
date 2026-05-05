@@ -494,6 +494,7 @@
         "loading": "Processing..."
       },
       "errors": {
+        "simCapacity":"Sim Capacity is required",
         "sim_package_required": "Sim package is required",
         "cards_count_min": "Cards count must be at least 1",
         "delivery_location_required": "Delivery location is required",

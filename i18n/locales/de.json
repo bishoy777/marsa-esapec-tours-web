@@ -1,5 +1,5 @@
 {
-    "vehicle": {
+  "vehicle": {
     "smallPrivateCar": "Kleiner Privatwagen",
     "smallPrivateCarDesc": "Bequem für Einzelpersonen oder Paare",
     "largePrivateCar": "Großer Privatwagen",
@@ -491,6 +491,7 @@
         "loading": "Wird verarbeitet..."
       },
       "errors": {
+        "simCapacity": "Sim ist erforderlich",
         "sim_package_required": "SIM-Paket ist erforderlich",
         "cards_count_min": "Anzahl muss mindestens 1 sein",
         "delivery_location_required": "Lieferort ist erforderlich",
