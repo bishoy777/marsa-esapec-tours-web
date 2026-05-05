@@ -62,30 +62,32 @@ import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 
-const services = [
-    {
-        title: t('services_section.taxi_title'),
-        description: t('services_section.taxi_desc'),
-        img: taxitransfer,
-        to: "/taxitransfer",
-        features: [
-            t('services_section.taxi_f1'),
-            t('services_section.taxi_f2'),
-            t('services_section.taxi_f3')
-        ]
-    },
-    {
-        title: t('services_section.sim_title'),
-        description: t('services_section.sim_desc'),
-        img: simservices,
-        to: "/simservices",
-        features: [
-            t('services_section.sim_f1'),
-            t('services_section.sim_f2'),
-            t('services_section.sim_f3')
-        ]
-    },
-];
+const services = computed(() => {
+    [
+        {
+            title: t('services_section.taxi_title'),
+            description: t('services_section.taxi_desc'),
+            img: taxitransfer,
+            to: "/taxitransfer",
+            features: [
+                t('services_section.taxi_f1'),
+                t('services_section.taxi_f2'),
+                t('services_section.taxi_f3')
+            ]
+        },
+        {
+            title: t('services_section.sim_title'),
+            description: t('services_section.sim_desc'),
+            img: simservices,
+            to: "/simservices",
+            features: [
+                t('services_section.sim_f1'),
+                t('services_section.sim_f2'),
+                t('services_section.sim_f3')
+            ]
+        },
+    ]
+});
 </script>
 <style scoped>
 /* Ensuring smooth rendering of animated images */
