@@ -144,14 +144,22 @@
 
                     <!-- Totals -->
                     <div class="border-t border-[#E6E6E6] pt-4 space-y-2 mt-4">
+                        <!-- Subtotal -->
                         <div class="flex justify-between text-sm">
                             <span>{{ $t('build_package.summary.subtotal') }}</span>
                             <span>{{ subTotal }} €</span>
                         </div>
 
+                        <!-- Discount Display (Only shows if more than 1 trip) -->
+                        <div v-if="discount > 0" class="flex justify-between text-sm text-green-600">
+                            <span>Discount (2%)</span>
+                            <span>- {{ discount.toFixed(2) }} €</span>
+                        </div>
+
+                        <!-- Total Price -->
                         <div class="flex justify-between pt-2 border-t">
                             <span class="font-bold">{{ $t('build_package.summary.total') }}</span>
-                            <span class="font-bold">{{ total }} €</span>
+                            <span class="font-bold text-lg">{{ total.toFixed(2) }} €</span>
                         </div>
                     </div>
 
@@ -438,11 +446,17 @@ const subTotal = computed(() =>
     selectedTrips.value.reduce((sum, t) => sum + t.price, 0)
 );
 
-const discount = computed(() =>
-    selectedTrips.value.length >= 3 ? 120 : 0
-);
+const discount = computed(() => {
+    if (selectedTrips.value.length > 1) {
+        return subTotal.value * 0.02;
+    }
+    return 0;
+});
 
-const total = computed(() => subTotal.value);
+// Final Total
+const total = computed(() => {
+    return subTotal.value - discount.value;
+});
 // STEPS
 const stepNumber = ref(1)
 
