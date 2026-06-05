@@ -176,7 +176,7 @@
                 </ul>
             </div>
             <div>
-                <h4 class="font-semibold text-foreground text-sm mb-4">{{ $t('footer.services') }}</h4>
+                <h4 class="font-semibold text-foreground text-sm mb-4">{{ $t('footer.links.services') }}</h4>
                 <ul class="space-y-2">
                     <li v-for="l in services" :key="l.name">
                         <NuxtLink :to="l.path" class="text-primary-foreground text-sm hover:text-foreground transition">
@@ -194,7 +194,7 @@
 
             <!-- Support -->
             <div>
-                <h4 class="font-semibold text-primary-foreground text-sm mb-4">{{ $t('footer.support') }}</h4>
+                <h4 class="font-semibold text-primary-foreground text-sm mb-4">{{ $t('footer.links.support') }}</h4>
                 <ul class="space-y-2">
                     <li v-for="l in support" :key="l.name">
                         <NuxtLink :to="l.path" class="text-primary-foreground text-sm hover:text-foreground transition">

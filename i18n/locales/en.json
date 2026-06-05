@@ -85,9 +85,11 @@
     "contact": "Contact",
     "location": "Marsa Alam, Egypt",
     "copyright": "© 2026 Marsa Escape Tours",
+
     "links": {
       "home": "Home",
       "trips": "Trips",
+      "support": "Support",
       "services": "Services",
       "packages": "Packages",
       "plan_trip": "Plan Your Trip"
